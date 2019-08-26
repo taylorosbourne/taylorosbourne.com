@@ -12,6 +12,7 @@ import PropTypes from "prop-types"
 // import Header from "./header"
 import "./layout.css"
 import Nav from "./nav";
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
   // const data = useStaticQuery(graphql`
@@ -37,19 +38,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{
-          display: `flex`,
-          justifyContent: `center`
-        }}>
-          <p style={{ maxWidth: 500 }}>
-            Made with <span role="img">❤️</span>, <span role="img">☕</span>, and <a style={{
-              textDecoration: `none`,
-              color: `#173449`,
-              fontWeight: `bold`,
-              fontFamily: `Arial`
-            }} href="https://www.gatsbyjs.org/" alt="gatsby-js">Gatsby</a>.
-        </p>
-        </footer>
+        <Footer/>
       </div>
     </>
   )

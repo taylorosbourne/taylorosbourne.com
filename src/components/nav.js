@@ -12,16 +12,7 @@ const Nav = () => (
     }}>
         <h5 style={{
             paddingTop: `25px`
-        }}>console.blog( 🔥)
-        {/* <select style={{
-            background: `transparent`,
-            border: 0
-        }}>
-                <option defaultValue>Web Development</option>
-                <option>Javascript</option>
-                <option>Typescript</option>
-                <option>Databases</option>
-            </select> */}
+        }}>console.blog( <span aria-label="fire" role="img">🔥</span>)
         </h5>
         <div style={{
             display: `flex`,
