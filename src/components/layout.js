@@ -7,22 +7,22 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+// import Header from "./header"
 import "./layout.css"
 import Nav from "./nav";
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
           justifyContent: `center`
         }}>
           <p style={{ maxWidth: 500 }}>
-            Made with ❤️, ☕, and <a style={{
+            Made with <span role="img">❤️</span>, <span role="img">☕</span>, and <a style={{
               textDecoration: `none`,
               color: `#173449`,
               fontWeight: `bold`,

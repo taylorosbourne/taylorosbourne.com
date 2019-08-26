@@ -1,16 +1,20 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from "../components/layout"
+import Layout from '../components/layout';
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => (
-
+const JavascriptPosts = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges.filter((item)  =>  {
+    return item.node.frontmatter.tag === 'javascript'
+  })
+  
+  return (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Javascript" />
     <br />
     <br />
-    {data.allMarkdownRemark.edges.reverse().map(post => (
+    {posts.reverse().map(post => (
       <div key={post.node.id} style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}>
         <h1><Link style={{
           textDecoration: `none`,
@@ -21,8 +25,8 @@ const IndexPage = ({ data }) => (
         <small>
           {post.node.frontmatter.date}
         </small>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <p>
           <div dangerouslySetInnerHTML={{ __html: post.node.html.slice(0, 500) + '...' }} />
         </p>
@@ -32,27 +36,25 @@ const IndexPage = ({ data }) => (
           fontWeight: `bold`,
           fontFamily: `Arial`,
           fontSize: `20px`
-        }} to={post.node.frontmatter.path}>Read More</Link>
+        }} to={post.node.frontmatter.path}>Read</Link>
         <br />
         <br />
-        <h5>Tags: <Link to={`/${post.node.frontmatter.tag}`} style={{
+        <h5>Tags: <span style={{
           background: `rgb(242,242,242)`,
           padding: `10px`,
-          borderRadius: `5px`,
-          textDecoration: `none`,
-          color: `#173449`,
-          fontFamily: `Arial`,
-        }}>{post.node.frontmatter.tag}</Link></h5>
+          borderRadius: `5px`
+        }}>{post.node.frontmatter.tag}</span></h5>
         <br />
         <br />
         {/* <hr /> */}
       </div>
     ))}
   </Layout>
-)
+  )
+}
 
-export const ALL_POSTS_QUERY = graphql`
-  query ALL_POSTS_QUERY {
+export const JAVASCRIPT_POSTS = graphql`
+  query JAVASCRIPT_POSTS {
     allMarkdownRemark {
       edges {
         node {
@@ -71,6 +73,4 @@ export const ALL_POSTS_QUERY = graphql`
   }
 `
 
-export default IndexPage
-
-
+export default JavascriptPosts
