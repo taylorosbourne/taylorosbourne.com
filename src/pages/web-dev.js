@@ -4,14 +4,14 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout';
 import SEO from "../components/seo"
 
-const JavascriptPosts = ({ data }) => {
+const WebDevPosts = ({ data }) => {
   const posts = data.allMarkdownRemark.edges.filter((item)  =>  {
-    return item.node.frontmatter.tag === 'javascript'
+    return item.node.frontmatter.tag === 'web-dev'
   })
   
   return (
   <Layout>
-    <SEO title="Javascript" />
+    <SEO title="Web-Dev" />
     <br />
     <br />
     {posts.reverse().map(post => (
@@ -36,7 +36,7 @@ const JavascriptPosts = ({ data }) => {
           fontWeight: `bold`,
           fontFamily: `Arial`,
           fontSize: `20px`
-        }} to={post.node.frontmatter.path}>Read</Link>
+        }} to={post.node.frontmatter.path}>Read More</Link>
         <br />
         <br />
         <h5>Tags: <span style={{
@@ -53,8 +53,8 @@ const JavascriptPosts = ({ data }) => {
   )
 }
 
-export const JAVASCRIPT_POSTS = graphql`
-  query JAVASCRIPT_POSTS {
+export const WEB_DEV_POSTS = graphql`
+  query WEB_DEV_POSTS {
     allMarkdownRemark {
       edges {
         node {
@@ -73,4 +73,4 @@ export const JAVASCRIPT_POSTS = graphql`
   }
 `
 
-export default JavascriptPosts
+export default WebDevPosts
