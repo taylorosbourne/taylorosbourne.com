@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby';
 
 const Nav = () => (
     <nav style={{
@@ -12,7 +13,7 @@ const Nav = () => (
     }}>
         <h5 style={{
             paddingTop: `25px`
-        }}>console.blog( <span aria-label="fire" role="img">🔥</span>)
+        }}><Link style={{textDecoration: `none`, color: `#173449`}} to="/">console.blog( <span aria-label="fire" role="img">🔥</span>)</Link>
         </h5>
         <div style={{
             display: `flex`,
