@@ -4,7 +4,7 @@ date: "2019-08-26"
 title: "My Attempt at a CLI for React: What I Learned"
 author: "Taylor Osbourne"
 tag: "command-line"
----
+--- 
 
 Since I began studying Web Development, I found the command line to be fascinating.  Even basic unix commands like changing directories and creating new directories and files was incredibly interesting to me.  As a newcomer to development (and to this day...) I found myself referring back to past projects for examples of functions or styles that I might have used but couldn't remember.  This meant opening up that project in my IDE and looking for the block of code I needed.  Once I began really embracing the command line, I was navigating to the files I needed with ease, and using the 'cat' command to print that file's contents to the terminal.  This really sped up the rate at which I could rip my past self off.  
 

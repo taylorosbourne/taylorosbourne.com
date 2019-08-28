@@ -1,31 +1,20 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import Link from 'gatsby-link'
 import { graphql } from 'gatsby'
-import Layout from "../components/layout"
+import Layout from '../components/layout';
 import SEO from "../components/seo"
-import styled from "styled-components"
 
-export const Tag = styled(Link)`
-  background: rgb(242,242,242);
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #173449;
-  font-family: Arial;
-  transition: all 0.1s ease-in-out;
-  :hover {
-    background: #173449;
-    color: rgb(242,242,242);
-  }
-`
-
-const IndexPage = ({ data }) => (
-
+const CommandLinePosts = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges.filter((item)  =>  {
+    return item.node.frontmatter.tag === 'command-line'
+  })
+  
+  return (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Command-Line" />
     <br />
     <br />
-    {data.allMarkdownRemark.edges.reverse().map(post => (
+    {posts.reverse().map(post => (
       <div key={post.node.id} style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}>
         <h1><Link style={{
           textDecoration: `none`,
@@ -50,16 +39,22 @@ const IndexPage = ({ data }) => (
         }} to={post.node.frontmatter.path}>Read More</Link>
         <br />
         <br />
-        <h5>Tags: <Tag to={`/${post.node.frontmatter.tag}`}>{post.node.frontmatter.tag}</Tag></h5>
+        <h5>Tags: <span style={{
+          background: `rgb(242,242,242)`,
+          padding: `10px`,
+          borderRadius: `5px`
+        }}>{post.node.frontmatter.tag}</span></h5>
         <br />
         <br />
+        {/* <hr /> */}
       </div>
     ))}
   </Layout>
-)
+  )
+}
 
-export const ALL_POSTS_QUERY = graphql`
-  query ALL_POSTS_QUERY {
+export const COMMAND_LINE_POSTS = graphql`
+  query COMMAND_LINE_POSTS {
     allMarkdownRemark {
       edges {
         node {
@@ -78,6 +73,4 @@ export const ALL_POSTS_QUERY = graphql`
   }
 `
 
-export default IndexPage
-
-
+export default CommandLinePosts

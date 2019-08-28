@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout';
 import styled from 'styled-components'
@@ -41,7 +41,6 @@ export default function Template({ data }) {
       <Link to="/" style={{ color: `#173449`, textDecoration: `none`, fontWeight: `bold`, fontSize: `30px` }}>&larr;</Link>
       <br />
       <br />
-      {/* <hr /> */}
       <h1>{post.frontmatter.title}</h1>
       <h4>
         Posted by {post.frontmatter.author} on {post.frontmatter.date}
