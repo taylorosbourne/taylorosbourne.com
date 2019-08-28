@@ -4,17 +4,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout';
 import SEO from "../components/seo"
 
-const CommandLinePosts = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter((item)  =>  {
-    return item.node.frontmatter.tag === 'command-line'
-  })
-  
-  return (
+const CommandLinePosts = ({ data }) => (
   <Layout>
     <SEO title="Command-Line" />
     <br />
     <br />
-    {posts.reverse().map(post => (
+    {data.allMarkdownRemark.edges.reverse().map(post => (
       <div key={post.node.id} style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}>
         <h1><Link style={{
           textDecoration: `none`,
@@ -50,27 +45,26 @@ const CommandLinePosts = ({ data }) => {
       </div>
     ))}
   </Layout>
-  )
-}
+)
 
 export const COMMAND_LINE_POSTS = graphql`
-  query COMMAND_LINE_POSTS {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            path
-            title
-            date
-            author
-            tag
-          }
+query COMMAND_LINE_POSTS {
+  allMarkdownRemark(filter: {frontmatter: {tag: {eq: "command-line"}}}) {
+    edges {
+      node {
+        id
+        html
+        frontmatter {
+          path
+          title
+          date
+          author
+          tag
         }
       }
     }
   }
+}
 `
 
 export default CommandLinePosts

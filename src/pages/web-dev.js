@@ -4,17 +4,12 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout';
 import SEO from "../components/seo"
 
-const WebDevPosts = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges.filter((item)  =>  {
-    return item.node.frontmatter.tag === 'web-dev'
-  })
-  
-  return (
+const WebDevPosts = ({ data }) => (
   <Layout>
     <SEO title="Web-Dev" />
     <br />
     <br />
-    {posts.reverse().map(post => (
+    {data.allMarkdownRemark.edges.reverse().map(post => (
       <div key={post.node.id} style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}>
         <h1><Link style={{
           textDecoration: `none`,
@@ -46,31 +41,29 @@ const WebDevPosts = ({ data }) => {
         }}>{post.node.frontmatter.tag}</span></h5>
         <br />
         <br />
-        {/* <hr /> */}
       </div>
     ))}
   </Layout>
-  )
-}
+)
 
 export const WEB_DEV_POSTS = graphql`
-  query WEB_DEV_POSTS {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            path
-            title
-            date
-            author
-            tag
-          }
+query WEB_DEV_POSTS {
+  allMarkdownRemark(filter: {frontmatter: {tag: {eq: "web-dev"}}}) {
+    edges {
+      node {
+        id
+        html
+        frontmatter {
+          path
+          title
+          date
+          author
+          tag
         }
       }
     }
   }
+}
 `
 
 export default WebDevPosts
