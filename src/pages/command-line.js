@@ -9,7 +9,7 @@ const CommandLinePosts = ({ data }) => (
     <SEO title="Command-Line" />
     <br />
     <br />
-    {data.allMarkdownRemark.edges.reverse().map(post => (
+    {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id} style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}>
         <h1><Link style={{
           textDecoration: `none`,
@@ -49,7 +49,7 @@ const CommandLinePosts = ({ data }) => (
 
 export const COMMAND_LINE_POSTS = graphql`
 query COMMAND_LINE_POSTS {
-  allMarkdownRemark(filter: {frontmatter: {tag: {eq: "command-line"}}}) {
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {tag: {eq: "command-line"}}}) {
     edges {
       node {
         id

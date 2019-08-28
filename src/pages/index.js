@@ -25,7 +25,7 @@ const IndexPage = ({ data }) => (
     <SEO title="Home" />
     <br />
     <br />
-    {data.allMarkdownRemark.edges.reverse().map(post => (
+    {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id} style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}>
         <h1><Link style={{
           textDecoration: `none`,
@@ -59,23 +59,24 @@ const IndexPage = ({ data }) => (
 )
 
 export const ALL_POSTS_QUERY = graphql`
-  query ALL_POSTS_QUERY {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          html
-          frontmatter {
-            path
-            title
-            date
-            author
-            tag
-          }
+query ALL_POSTS_QUERY {
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    edges {
+      node {
+        id
+        html
+        frontmatter {
+          path
+          title
+          date
+          author
+          tag
         }
       }
     }
   }
+}
+
 `
 
 export default IndexPage

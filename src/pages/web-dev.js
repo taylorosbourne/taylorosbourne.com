@@ -9,7 +9,7 @@ const WebDevPosts = ({ data }) => (
     <SEO title="Web-Dev" />
     <br />
     <br />
-    {data.allMarkdownRemark.edges.reverse().map(post => (
+    {data.allMarkdownRemark.edges.map(post => (
       <div key={post.node.id} style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}>
         <h1><Link style={{
           textDecoration: `none`,
@@ -48,7 +48,7 @@ const WebDevPosts = ({ data }) => (
 
 export const WEB_DEV_POSTS = graphql`
 query WEB_DEV_POSTS {
-  allMarkdownRemark(filter: {frontmatter: {tag: {eq: "web-dev"}}}) {
+  allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {tag: {eq: "web-dev"}}}) {
     edges {
       node {
         id
