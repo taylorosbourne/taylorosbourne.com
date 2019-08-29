@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
+import {Link} from 'gatsby'
+import styled from 'styled-components'
 
-const Link = styled.a`
+const StyledLink = styled(Link)`
     text-decoration: none;
     color: #173449;
     font-weight: bold;
@@ -24,20 +24,8 @@ const Link = styled.a`
     :hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
+    transform: scaleX(1); 
+  }
 `
 
-
-const Footer = () => (
-    <footer style={{
-        display: `flex`,
-        justifyContent: `center`
-    }}>
-        <p style={{ maxWidth: 500 }}>
-            Made with <span aria-label="love" role="img">❤️</span>, <span aria-label="coffee" role="img">☕</span>, and  <Link href="https://www.gatsbyjs.org/" target="_blank" alt="gatsby-js">Gatsby</Link>.
-        </p>
-    </footer>
-)
-
-export default Footer
+export default StyledLink

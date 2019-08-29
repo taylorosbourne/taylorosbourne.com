@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import StyledLink from './link'
 
 const Header = ({ siteTitle }) => (
   <header
@@ -17,15 +18,11 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <Link
+        <StyledLink
           to="/"
-          style={{
-            color: `rgb(23,52,73)`,
-            textDecoration: `none`,
-          }}
         >
           {siteTitle}
-        </Link>
+        </StyledLink>
       </h1>
     </div>
   </header>

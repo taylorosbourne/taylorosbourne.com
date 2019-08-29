@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styled from "styled-components"
+import StyledLink from '../components/link'
 
 export const Tag = styled(Link)`
   background: rgb(242,242,242);
@@ -41,13 +42,7 @@ const IndexPage = ({ data }) => (
         <p>
           <div dangerouslySetInnerHTML={{ __html: post.node.html.slice(0, 500) + '...' }} />
         </p>
-        <Link style={{
-          textDecoration: `none`,
-          color: `#173449`,
-          fontWeight: `bold`,
-          fontFamily: `Arial`,
-          fontSize: `20px`
-        }} to={post.node.frontmatter.path}>Read More</Link>
+        <StyledLink to={post.node.frontmatter.path}>Read More</StyledLink>
         <br />
         <br />
         <h5>Tags: <Tag to={`/${post.node.frontmatter.tag}`}>{post.node.frontmatter.tag}</Tag></h5>

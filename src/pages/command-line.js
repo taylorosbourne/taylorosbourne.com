@@ -41,7 +41,6 @@ const CommandLinePosts = ({ data }) => (
         }}>{post.node.frontmatter.tag}</span></h5>
         <br />
         <br />
-        {/* <hr /> */}
       </div>
     ))}
   </Layout>
