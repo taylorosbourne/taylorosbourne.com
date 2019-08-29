@@ -2,6 +2,14 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import StyledLink from '../components/link'
+import styled from 'styled-components'
+
+const UhOh = styled.h1`
+  font-size: 150px;
+  @media(max-width: 800px){
+    font-size: 100px;
+  }
+`
 
 const NotFoundPage = () => (
   <Layout>
@@ -13,7 +21,7 @@ const NotFoundPage = () => (
       height: `60vh`,
       marginTop: `150px`
     }}>
-      <h1 style={{fontSize: `150px`}}>UH-OH</h1>
+      <UhOh>UH-OH</UhOh>
       <h1 style={{fontSize: `100px`}}><span role="img" aria-label="facepalm">🤦‍♂️</span></h1>
       <p>You fucked up</p>
       <p>back to the <StyledLink to="/">articles</StyledLink></p>
