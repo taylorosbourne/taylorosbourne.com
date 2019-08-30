@@ -1,1 +1,1 @@
-My personal blog, enjoy! 😄
+My personal blog, [enjoy](http://taylorosbourne.com)! 😄
