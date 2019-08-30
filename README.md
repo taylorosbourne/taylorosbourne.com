@@ -1,1 +1,1 @@
-My personal blog, [enjoy](http://taylorosbourne.com)! 😄
+My personal console.blog( 🔥), [enjoy](http://taylorosbourne.com)! 😄
