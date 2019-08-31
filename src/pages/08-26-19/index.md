@@ -16,7 +16,7 @@ I did this for days, cementing the set-up process and writing essentially 'boile
 
 If you aren't familiar with the express generator, I've linked it above.  Express generator is able to generate the necessary boilerplate set-up code required for an express app.  On top of that, you could specify the view engine as well as styling options.  The first time I ran the command 'express --view=hbs --ccs=sass myapp' my mind was blown.  Instantly, my terminal printed a long message that looked like this:
 
-```
+```bash
    create : myapp/
    create : myapp/public/
    create : myapp/public/javascripts/
@@ -55,7 +55,7 @@ I started with a small project, using the [OCLIF (open-cli-framework)](https://o
 
 After that, I felt like king of the command line.  Okay, not really.  What I really wanted was to create a practical tool.  A while later I had an idea, an idea that I thought was a pretty good one.  Create-react-app is a great tool, why not repeat the process for react components?  I started working on Create-react-component immediately.  It started as a Bash script.  This was my first time working with a bash shell script, and seeing syntax like this:
 
-```
+```bash
     case  $variable-name  in
             pattern1)       
      		command1
@@ -83,7 +83,7 @@ That was fun and the repo for that code can be found [here](https://github.com/t
 
 Create-react-component was working and I liked it alot.  It looked something like this: 
 
-```
+```bash
     create-react-component Button 
 ```
 
@@ -107,7 +107,7 @@ Which would generate this:
 
 This structure kept all of my components organized and easy to maintain.  Seperating the logic, styles, and tests was a big help.  Each of the files come filled with a jsx file containing a React functional component, a JS file importing styled-components, my styling tool of choice, a test file containing a modified version of CRA's 'it renders without crashing' test, and a package.json with this:
 
-```
+```js
     {
         "main": "Button.jsx"
     }
@@ -115,19 +115,19 @@ This structure kept all of my components organized and easy to maintain.  Sepera
 
 The inclusion of the package.json meant that I could clean up my imports so that they looke like this:
 
-```
+```js
     import Button from './components/Button'
 ```
 
 instead of this:
 
-```
+```js
     import Button from './components/Button/Button.jsx'
 ```
 
 I felt on top of the world.  I had big plans to add flags for different style options, like sass or vanilla css, and a flag to use typescript in place of vanilla js.  However, I hit a small road bump.  I ran yarn add create-react-component, thinking I would be locally installing my own package, but then I saw the yarn message in my terminal:
 
-```
+```bash
     [1/4] 🔍  Resolving packages...
     [2/4] 🚚  Fetching packages...
     [3/4] 🔗  Linking dependencies...
@@ -138,7 +138,7 @@ I know what's happening there, it's pulling from the package registry!  That's w
 
 After some thought, I decided 'who cares'?  Both Mcdonald's and Burger King can exist, my package can too.  So I renamed the package to 'react-cli'.  I shortened the command to crc, and added a new command: cra.  The cra command would simply run:
 
-```
+```bash
     npx create-react-app yourapp
 ```
 
