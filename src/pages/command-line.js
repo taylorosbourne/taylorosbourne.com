@@ -1,39 +1,9 @@
 import React from 'react'
-import Link from 'gatsby-link'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby';
 import Layout from '../components/layout';
-import SEO from "../components/seo"
-import StyledLink from '../components/link'
-import styled from 'styled-components'
-
-const PostBody = styled.div`
-  a {
-    text-decoration: none;
-    color: #173449;
-    font-weight: bold;
-    font-family: Arial;
-    position: relative;
-    :before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: #173449;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    }
-    :hover:before {
-    visibility: visible;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1); 
-  }
-}
-`
+import SEO from '../components/seo';
+import { StyledLink } from '../styles/Link';
+import { PostBody } from '../styles/Post';
 
 const CommandLinePosts = ({ data }) => (
   <Layout>
@@ -70,7 +40,7 @@ const CommandLinePosts = ({ data }) => (
       </div>
     ))}
   </Layout>
-)
+);
 
 export const COMMAND_LINE_POSTS = graphql`
 query COMMAND_LINE_POSTS {
@@ -90,6 +60,6 @@ query COMMAND_LINE_POSTS {
     }
   }
 }
-`
+`;
 
-export default CommandLinePosts
+export default CommandLinePosts;

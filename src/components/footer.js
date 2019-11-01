@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 const Link = styled.a`
   text-decoration: none;
@@ -51,6 +51,6 @@ const Footer = () => (
       .
     </p>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

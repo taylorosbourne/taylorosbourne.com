@@ -1,15 +1,15 @@
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import StyledLink from '../components/link'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import { StyledLink } from '../styles/Link';
 
 const UhOh = styled.h1`
   font-size: 150px;
   @media(max-width: 800px){
     font-size: 100px;
   }
-`
+`;
 
 const NotFoundPage = () => (
   <Layout>
@@ -27,6 +27,6 @@ const NotFoundPage = () => (
       <p>back to the <StyledLink to="/">articles</StyledLink></p>
     </div>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
