@@ -26,7 +26,7 @@ const Link = styled.a`
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
-`
+`;
 
 const Footer = () => (
   <footer

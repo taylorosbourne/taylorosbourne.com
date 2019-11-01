@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Layout from '../components/layout';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const PostBody = styled.div`
   a {
@@ -31,10 +31,10 @@ const PostBody = styled.div`
     transform: scaleX(1); 
   }
 }
-`
+`;
 
 export default function Template({ data }) {
-  const post = data.markdownRemark
+  const post = data.markdownRemark;
 
   return (
     <Layout>
@@ -48,7 +48,7 @@ export default function Template({ data }) {
       <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
-}
+};
 
 export const POST_BY_PATH = graphql`
   query POST_BY_PATH($path: String!) {
@@ -63,4 +63,4 @@ export const POST_BY_PATH = graphql`
       }
     }
   }
-`
+`;

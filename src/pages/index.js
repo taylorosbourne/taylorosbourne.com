@@ -11,21 +11,21 @@ const ImgRounded = styled.img`
   height: 200px;
   width: 200px;
   border-radius: 50%;
-`
+`;
 
 const InfoContainer = styled.div`
   margin: 55px auto;
   display: flex;
   justify-content: space-around;
   align-items: center;
-`
+`;
 
 const InfoList = styled.ul`
   li {
     list-style: none;
     line-height: 1;
   }
-`
+`;
 
 export const Tag = styled(Link)`
   background: rgb(242, 242, 242);
@@ -39,7 +39,7 @@ export const Tag = styled(Link)`
     background: #173449;
     color: rgb(242, 242, 242);
   }
-`
+`;
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -115,7 +115,7 @@ const IndexPage = ({ data }) => (
       </div>
     ))}
   </Layout>
-)
+);
 
 export const ALL_POSTS_QUERY = graphql`
   query ALL_POSTS_QUERY {
@@ -135,6 +135,6 @@ export const ALL_POSTS_QUERY = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;

@@ -40,7 +40,7 @@ const WebDevPosts = ({ data }) => (
       </div>
     ))}
   </Layout>
-)
+);
 
 export const WEB_DEV_POSTS = graphql`
 query WEB_DEV_POSTS {
@@ -60,6 +60,6 @@ query WEB_DEV_POSTS {
     }
   }
 }
-`
+`;
 
-export default WebDevPosts
+export default WebDevPosts;
