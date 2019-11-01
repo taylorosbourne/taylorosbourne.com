@@ -41,6 +41,34 @@ export const Tag = styled(Link)`
   }
 `;
 
+const InfoLink = styled.a`
+    text-decoration: none;
+    color: #173449;
+    font-weight: bold;
+    font-family: Arial;
+    position: relative;
+    cursor: pointer;
+    :before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #173449;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    }
+    :hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1); 
+  }
+`
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -50,7 +78,7 @@ const IndexPage = ({ data }) => (
       <ImgRounded src={Portrait} alt="portrait" />
       <InfoList>
         <li>
-          <span role="img" aria-label="ageAndPronouns">🙆‍♂️</span> 26. He/Him
+          <span role="img" aria-label="ageAndPronouns">🚀</span> 26-years-old. He/Him
         </li>
         <li>
           <span role="img" aria-label="family">👨‍👩‍👧</span> Husband {"&"} Proud Step-Dad
@@ -59,13 +87,43 @@ const IndexPage = ({ data }) => (
           <span role="img" aria-label="job">💻</span> Full-Stack Dev
         </li>
         <li>
-          <span role="img" aria-label="hobby">🧰</span> Avid-tinkerer
+          <span role="img" aria-label="hobby">🧰</span> Tinkerer
         </li>
         <li>
           <span role="img" aria-label="gamer">🎮</span> Gamer
         </li>
       </InfoList>
     </InfoContainer>
+    <hr/>
+    <div style={{
+      display: `flex`,
+      justifyContent: `space-between`,
+      alignItems: `flex-start`
+    }}>
+      <div style={{width: `45%`}}>
+        <h2>Projects</h2>
+        <InfoList>
+          <li style={{marginLeft: `-25px`}}><a style={{color: `#000`}} href="https://www.autoclaimsassistance.com/" target="_blank" rel="noopener noreferrer" alt="aca">www.autoclaimsassistance.com</a></li>
+          <li style={{marginLeft: `-25px`}}><a style={{color: `#000`}} href="https://www.npmjs.com/package/dad-joke-cli" target="_blank" rel="noopener noreferrer" alt="dadjokecli">Dad-joke-cli</a></li>
+          <li style={{marginLeft: `-25px`}}><a style={{color: `#000`}} href="https://devdash.netlify.com/" target="_blank" rel="noopener noreferrer" alt="devdash">Devdash</a></li>
+          <li style={{marginLeft: `-25px`}}><InfoLink href="https://github.com/taylorosbourne" target="_blank" rel="noopener noreferrer" alt="github">Github</InfoLink></li>
+        </InfoList>
+      </div>
+      <div style={{width: `1px`, height: `190px`, background: `rgb(210,210,210)`}}></div>
+      <div style={{width: `45%`}}>
+        <h2>Experience</h2>
+        <InfoList>
+          <li style={{marginLeft: `-25px`}}>Manheim || Software Developer</li>
+          <li style={{marginLeft: `-25px`}}>General Assembly || Assistant Instructor</li>
+          <li style={{marginLeft: `-25px`}}>Freelance || Developer</li>
+          <li style={{marginLeft: `-25px`}}><InfoLink href="https://drive.google.com/file/d/1gerQVwoyvV74G8M7NWdpn_zGW7ARWogS/view?usp=sharing" target="_blank" rel="noopener noreferrer" alt="resume">Resume</InfoLink></li>
+        </InfoList>
+      </div>
+    </div>
+    <br/>
+    <hr/>
+    <br/>
+    <br/>
     {data.allMarkdownRemark.edges.map(post => (
       <div
         key={post.node.id}
