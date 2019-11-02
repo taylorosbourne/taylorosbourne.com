@@ -24,10 +24,13 @@ const InfoList = styled.ul`
   li {
     list-style: none;
     line-height: 1;
+    a {
+      margin-left: -25px;
+    }
   }
 `;
 
-export const Tag = styled(Link)`
+const Tag = styled(Link)`
   background: rgb(242, 242, 242);
   padding: 10px;
   border-radius: 5px;
@@ -69,6 +72,16 @@ const InfoLink = styled.a`
   }
 `
 
+const Card = styled.div`
+  width: 48%;
+  background: rgb(245,245,245);
+  padding: 10px 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 8px 6px -8px black;
+	   -moz-box-shadow: 0 8px 6px -8px black;
+	        box-shadow: 0 8px 6px -8px black;
+`
+
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
@@ -94,34 +107,34 @@ const IndexPage = ({ data }) => (
         </li>
       </InfoList>
     </InfoContainer>
-    <hr/>
+    {/* <hr/> */}
     <div style={{
       display: `flex`,
       justifyContent: `space-between`,
       alignItems: `flex-start`
     }}>
-      <div style={{width: `45%`}}>
+      <Card>
         <h2>Projects</h2>
         <InfoList>
-          <li style={{marginLeft: `-25px`}}><a style={{color: `#000`}} href="https://www.autoclaimsassistance.com/" target="_blank" rel="noopener noreferrer" alt="aca">www.autoclaimsassistance.com</a></li>
-          <li style={{marginLeft: `-25px`}}><a style={{color: `#000`}} href="https://www.npmjs.com/package/dad-joke-cli" target="_blank" rel="noopener noreferrer" alt="dadjokecli">Dad-joke-cli</a></li>
-          <li style={{marginLeft: `-25px`}}><a style={{color: `#000`}} href="https://devdash.netlify.com/" target="_blank" rel="noopener noreferrer" alt="devdash">Devdash</a></li>
-          <li style={{marginLeft: `-25px`}}><InfoLink href="https://github.com/taylorosbourne" target="_blank" rel="noopener noreferrer" alt="github">Github</InfoLink></li>
+          <li><a style={{color: `#000`}} href="https://www.autoclaimsassistance.com/" target="_blank" rel="noopener noreferrer" alt="aca">www.autoclaimsassistance.com</a></li>
+          <li><a style={{color: `#000`}} href="https://www.npmjs.com/package/dad-joke-cli" target="_blank" rel="noopener noreferrer" alt="dadjokecli">Dad-joke-cli</a></li>
+          <li><a style={{color: `#000`}} href="https://devdash.netlify.com/" target="_blank" rel="noopener noreferrer" alt="devdash">Devdash</a></li>
+          <li><InfoLink href="https://github.com/taylorosbourne" target="_blank" rel="noopener noreferrer" alt="github">Github</InfoLink></li>
         </InfoList>
-      </div>
-      <div style={{width: `1px`, height: `190px`, background: `rgb(210,210,210)`}}></div>
-      <div style={{width: `45%`}}>
+      </Card>
+      {/* <div style={{width: `1px`, height: `190px`, background: `rgb(210,210,210)`}}></div> */}
+      <Card>
         <h2>Experience</h2>
         <InfoList>
           <li style={{marginLeft: `-25px`}}>Manheim || Software Developer</li>
           <li style={{marginLeft: `-25px`}}>General Assembly || Assistant Instructor</li>
           <li style={{marginLeft: `-25px`}}>Freelance || Developer</li>
-          <li style={{marginLeft: `-25px`}}><InfoLink href="https://drive.google.com/file/d/1gerQVwoyvV74G8M7NWdpn_zGW7ARWogS/view?usp=sharing" target="_blank" rel="noopener noreferrer" alt="resume">Resume</InfoLink></li>
+          <li><InfoLink href="https://drive.google.com/file/d/1gerQVwoyvV74G8M7NWdpn_zGW7ARWogS/view?usp=sharing" target="_blank" rel="noopener noreferrer" alt="resume">Resume</InfoLink></li>
         </InfoList>
-      </div>
+      </Card>
     </div>
     <br/>
-    <hr/>
+    {/* <hr/> */}
     <br/>
     <br/>
     {data.allMarkdownRemark.edges.map(post => (
