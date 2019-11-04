@@ -5,9 +5,9 @@ import SEO from '../components/seo';
 import { StyledLink } from '../styles/Link';
 import { PostBody } from '../styles/Post';
 
-const ReactJsPosts = ({ data }) => (
+const RubyPosts = ({ data }) => (
   <Layout>
-    <SEO title="React" />
+    <SEO title="Ruby" />
     <br />
     <br />
     {data.allMarkdownRemark.edges.map(post => (
@@ -67,11 +67,11 @@ const ReactJsPosts = ({ data }) => (
   </Layout>
 );
 
-export const REACT_POSTS = graphql`
-  query REACT_POSTS {
+export const RUBY_POSTS = graphql`
+  query RUBY_POSTS {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tag: { eq: "react" } } }
+      filter: { frontmatter: { tag: { eq: "ruby" } } }
     ) {
       edges {
         node {
@@ -90,4 +90,4 @@ export const REACT_POSTS = graphql`
   }
 `;
 
-export default ReactJsPosts;
+export default RubyPosts;
