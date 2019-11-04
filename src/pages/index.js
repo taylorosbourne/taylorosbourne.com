@@ -72,6 +72,26 @@ const InfoLink = styled.a`
   }
 `
 
+const ExperienceSection = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media(max-width: 700px) {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+`
+
+const VerticalRule = styled.div`
+    width: 1px;
+    height: 200px;
+    background: rgb(210,210,210);
+    @media(max-width: 700px) {
+      height: 0;
+      width: 0;
+    }
+`
+
 // const Card = styled.div`
 //   width: 48%;
 //   background: rgb(245,245,245);
@@ -108,11 +128,7 @@ const IndexPage = ({ data }) => (
       </InfoList>
     </InfoContainer>
     <hr/>
-    <div style={{
-      display: `flex`,
-      justifyContent: `space-between`,
-      alignItems: `flex-start`
-    }}>
+    <ExperienceSection>
       <div>
         <h2>Projects</h2>
         <InfoList>
@@ -122,7 +138,7 @@ const IndexPage = ({ data }) => (
           <li><InfoLink href="https://github.com/taylorosbourne" target="_blank" rel="noopener noreferrer" alt="github">Github</InfoLink></li>
         </InfoList>
       </div>
-      <div style={{width: `1px`, height: `200px`, background: `rgb(210,210,210)`}}></div>
+      <VerticalRule/>
       <div>
         <h2>Experience</h2>
         <InfoList>
@@ -132,7 +148,7 @@ const IndexPage = ({ data }) => (
           <li><InfoLink href="https://drive.google.com/file/d/1gerQVwoyvV74G8M7NWdpn_zGW7ARWogS/view?usp=sharing" target="_blank" rel="noopener noreferrer" alt="resume">Resume</InfoLink></li>
         </InfoList>
       </div>
-    </div>
+    </ExperienceSection>
     <br/>
     <hr/>
     <br/>
