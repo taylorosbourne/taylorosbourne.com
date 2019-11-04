@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 // import { useStaticQuery, graphql } from 'gatsby';
 import './layout.css';
+import SkipNav from './skipNav';
 import Nav from './nav';
 import Footer from './footer';
 
@@ -18,6 +19,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <SkipNav/>
       <Nav />
       <div
         style={{

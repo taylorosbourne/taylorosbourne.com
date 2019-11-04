@@ -139,7 +139,7 @@ const IndexPage = ({ data }) => (
       <Card>
         <h2>Projects</h2>
         <InfoList>
-          <li><a style={{color: `#000`}} href="https://www.autoclaimsassistance.com/" target="_blank" rel="noopener noreferrer" alt="aca">www.autoclaimsassistance.com</a></li>
+          <li><a id="projects" style={{color: `#000`}} href="https://www.autoclaimsassistance.com/" target="_blank" rel="noopener noreferrer" alt="aca">www.autoclaimsassistance.com</a></li>
           <li><a style={{color: `#000`}} href="https://www.npmjs.com/package/dad-joke-cli" target="_blank" rel="noopener noreferrer" alt="dadjokecli">Dad-joke-cli</a></li>
           <li><a style={{color: `#000`}} href="https://devdash.netlify.com/" target="_blank" rel="noopener noreferrer" alt="devdash">Devdash</a></li>
           <li><InfoLink href="https://github.com/taylorosbourne" target="_blank" rel="noopener noreferrer" alt="github">Github</InfoLink></li>
