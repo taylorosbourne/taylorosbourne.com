@@ -73,7 +73,7 @@ const InfoLink = styled.a`
     -webkit-transform: scaleX(1);
     transform: scaleX(1); 
   }
-`
+`;
 
 const ExperienceSection = styled.div`
     display: flex;
@@ -83,17 +83,7 @@ const ExperienceSection = styled.div`
       flex-direction: column;
       margin: 0 auto;
     }
-`
-
-const VerticalRule = styled.div`
-    width: 1px;
-    height: 200px;
-    background: rgb(210,210,210);
-    @media(max-width: 700px) {
-      height: 0;
-      width: 0;
-    }
-`
+`;
 
 const Card = styled.div`
   width: 48%;
@@ -107,7 +97,7 @@ const Card = styled.div`
     width: 100%;
     margin: 15px auto;
   }
-`
+`;
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -134,7 +124,6 @@ const IndexPage = ({ data }) => (
         </li>
       </InfoList>
     </InfoContainer>
-    {/* <hr/> */}
     <ExperienceSection>
       <Card>
         <h2>Projects</h2>
@@ -145,7 +134,6 @@ const IndexPage = ({ data }) => (
           <li><InfoLink href="https://github.com/taylorosbourne" target="_blank" rel="noopener noreferrer" alt="github">Github</InfoLink></li>
         </InfoList>
       </Card>
-      {/* <VerticalRule/> */}
       <Card>
         <h2>Experience</h2>
         <InfoList>
@@ -157,7 +145,6 @@ const IndexPage = ({ data }) => (
       </Card>
     </ExperienceSection>
     <br/>
-    {/* <hr/> */}
     <br/>
     <br/>
     {data.allMarkdownRemark.edges.map(post => (

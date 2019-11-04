@@ -45,7 +45,7 @@ export default function Template({ data }) {
       <h4>
         {post.frontmatter.date}
       </h4>
-      <PostBody dangerouslySetInnerHTML={{ __html: post.html }} />
+      <PostBody id="main" dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 };

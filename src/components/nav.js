@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-    padding-top: 25px;
+    padding-top: 55px;
     max-width: 90%;
     height: 80px;
     display: flex;
