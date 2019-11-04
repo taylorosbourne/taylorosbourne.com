@@ -52,7 +52,7 @@ class Greeting
 end
 ```
 
-This, so far, is pretty straight-forward.  We have created a class with only one method say_hello, which takes a param called name, prints a message containg that param, and returns the length of that param.  So why do we want static type checking?  Well, let's see what happens when we pass an Integer to our say_hello method.
+This, so far, is pretty straight-forward.  We have created a class with only one method say hello, which takes a param called name, prints a message containg that param, and returns the length of that param.  So why do we want static type checking?  Well, let's see what happens when we pass an Integer to our say hello method.
 
 ```bash
 Hello 5
