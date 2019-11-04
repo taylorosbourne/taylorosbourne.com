@@ -92,15 +92,19 @@ const VerticalRule = styled.div`
     }
 `
 
-// const Card = styled.div`
-//   width: 48%;
-//   background: rgb(245,245,245);
-//   padding: 10px 15px;
-//   border-radius: 5px;
-//   -webkit-box-shadow: 0 8px 6px -8px black;
-// 	   -moz-box-shadow: 0 8px 6px -8px black;
-// 	        box-shadow: 0 8px 6px -8px black;
-// `
+const Card = styled.div`
+  width: 48%;
+  background: rgb(245,245,245);
+  padding: 10px 15px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 8px 6px -8px black;
+	   -moz-box-shadow: 0 8px 6px -8px black;
+	        box-shadow: 0 8px 6px -8px black;
+  @media(max-width: 700px) {
+    width: 100%;
+    margin: 15px auto;
+  }
+`
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -127,9 +131,9 @@ const IndexPage = ({ data }) => (
         </li>
       </InfoList>
     </InfoContainer>
-    <hr/>
+    {/* <hr/> */}
     <ExperienceSection>
-      <div>
+      <Card>
         <h2>Projects</h2>
         <InfoList>
           <li><a style={{color: `#000`}} href="https://www.autoclaimsassistance.com/" target="_blank" rel="noopener noreferrer" alt="aca">www.autoclaimsassistance.com</a></li>
@@ -137,9 +141,9 @@ const IndexPage = ({ data }) => (
           <li><a style={{color: `#000`}} href="https://devdash.netlify.com/" target="_blank" rel="noopener noreferrer" alt="devdash">Devdash</a></li>
           <li><InfoLink href="https://github.com/taylorosbourne" target="_blank" rel="noopener noreferrer" alt="github">Github</InfoLink></li>
         </InfoList>
-      </div>
-      <VerticalRule/>
-      <div>
+      </Card>
+      {/* <VerticalRule/> */}
+      <Card>
         <h2>Experience</h2>
         <InfoList>
           <li style={{marginLeft: `-25px`}}>Manheim || Software Developer</li>
@@ -147,10 +151,10 @@ const IndexPage = ({ data }) => (
           <li style={{marginLeft: `-25px`}}>Freelance || Developer</li>
           <li><InfoLink href="https://drive.google.com/file/d/1gerQVwoyvV74G8M7NWdpn_zGW7ARWogS/view?usp=sharing" target="_blank" rel="noopener noreferrer" alt="resume">Resume</InfoLink></li>
         </InfoList>
-      </div>
+      </Card>
     </ExperienceSection>
     <br/>
-    <hr/>
+    {/* <hr/> */}
     <br/>
     <br/>
     {data.allMarkdownRemark.edges.map(post => (
