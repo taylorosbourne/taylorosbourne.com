@@ -20,6 +20,7 @@ const SkipNavButton = styled.a`
     font-family: Arial;
     border: 0;
     opacity: 0;
+    text-decoration: none;
     :focus {
         opacity: 1;
     }
@@ -27,7 +28,7 @@ const SkipNavButton = styled.a`
 
 const SkipNav = () => (
     <SkipNavCon>
-        <SkipNavButton href="#projects" alt="skip-nav">Skip Navigation</SkipNavButton>
+        <SkipNavButton href="#main" alt="skip-nav">Skip Navigation</SkipNavButton>
     </SkipNavCon>
 )
 
