@@ -18,6 +18,9 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media(max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 const InfoList = styled.ul`
