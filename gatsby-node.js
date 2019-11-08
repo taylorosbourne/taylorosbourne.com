@@ -1,8 +1,9 @@
 const path = require('path')
 
-exports.createPages = ({actions, graphql}) => {
-    const {createPage} = actions
+exports.createPages = ({ actions, graphql }) => {
+    const { createPage } = actions
     const postTemplate = path.resolve('src/templates/blogPost.js')
+    // const tagTemplate = path.resolve('src/templates/tagPosts.js')
 
     return graphql(`
         {
@@ -16,6 +17,7 @@ exports.createPages = ({actions, graphql}) => {
                       title
                       date
                       author
+                      tag
                     }
                   }
                 }
@@ -26,48 +28,19 @@ exports.createPages = ({actions, graphql}) => {
             return Promise.reject(res.errors)
         }
 
-        res.data.allMarkdownRemark.edges.forEach(({node}) => {
+        res.data.allMarkdownRemark.edges.forEach(({ node }) => {
             createPage({
                 path: node.frontmatter.path,
                 component: postTemplate
             })
         })
+
+        // res.data.allMarkdownRemark.edges.forEach(({node}) => {
+        //   createPage({
+        //     path: node.fronmatter.tag,
+        //     component: tagTemplate,
+        //     tag: node.frontmatter.tag
+        //   })
+        // })
     })
 }
-
-// exports.createPages = ({actions, graphql}) => {
-//   const {createPage} = actions
-//   const tagPostsTemplate = path.resolve('src/templates/tagPosts.js')
-
-//   return graphql(`
-//       {
-//           allMarkdownRemark {
-//               edges {
-//                 node {
-//                   html
-//                   id
-//                   frontmatter {
-//                     path
-//                     title
-//                     date
-//                     author
-//                     tag
-//                   }
-//                 }
-//               }
-//             }
-//       }
-//   `).then(res  => {
-//       if(res.errors) {
-//           return Promise.reject(res.errors)
-//       }
-
-//       res.data.allMarkdownRemark.edges.forEach(({node}) => {
-//           createPage({
-//               path: node.frontmatter.tag,
-//               tag: node.frontmatter.tag,
-//               component: tagPostsTemplate
-//           })
-//       })
-//   })
-// }
