@@ -8,7 +8,7 @@ exports.createPages = ({
       createPage
     } = actions
     const postTemplate = path.resolve('src/templates/blogPost.js')
-    // const tagTemplate = path.resolve('src/templates/tagPosts.js')
+    const tagTemplate = path.resolve('src/templates/tagPosts.js')
 
     return graphql(`
         {
@@ -40,19 +40,22 @@ exports.createPages = ({
           posts.forEach(({
             node
           }) => {
+            
             createPage({
               path: node.frontmatter.path,
               component: postTemplate
             })
           })
 
-          // res.data.allMarkdownRemark.edges.forEach(({node}) => {
-          //   createPage({
-          //     path: node.fronmatter.tag,
-          //     component: tagTemplate,
-          //     tag: node.frontmatter.tag
-          //   })
-          // })
+          res.data.allMarkdownRemark.edges.forEach(({node}) => {
+            createPage({
+              path: node.frontmatter.tag,
+              component: tagTemplate,
+              context: {
+                tag: node.frontmatter.tag
+              }
+            })
+          })
         })
       })
     }
