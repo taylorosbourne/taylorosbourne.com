@@ -38,21 +38,21 @@ export default function Template({ data }) {
 
   return (
     <Layout>
-      <Link to="/" style={{ color: `#173449`, textDecoration: `none`, fontWeight: `bold`, fontSize: `30px` }}>&larr;</Link>
+      <Link to="/" style={ { color: `#173449`, textDecoration: `none`, fontWeight: `bold`, fontSize: `30px` } }>&larr;</Link>
       <br />
       <br />
-      <h1>{post.frontmatter.title}</h1>
+      <h1>{ post.frontmatter.title }</h1>
       <h4>
-        {post.frontmatter.date}
+        { post.frontmatter.date }
       </h4>
-      <PostBody id="main" dangerouslySetInnerHTML={{ __html: post.html }} />
+      <PostBody id="main" dangerouslySetInnerHTML={ { __html: post.html } } />
     </Layout>
   )
 };
 
 export const POST_BY_PATH = graphql`
   query POST_BY_PATH($path: String!) {
-    markdownRemark(frontmatter: {path: {eq: $path}}) {
+    markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
         path

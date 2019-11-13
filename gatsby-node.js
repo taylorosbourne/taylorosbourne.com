@@ -1,15 +1,14 @@
 const path = require('path')
-// const _ = require('lodash')
 
-exports.createPages = ({actions, graphql}) => {
-    const {createPage} = actions
-
-    const templates = {
-      posts: path.resolve('src/templates/blogPost.js'),
-      // tagPosts: path.resolve('src/templates/tagPosts.js')
-    }
-
+exports.createPages = ({
+    actions,
+    graphql
+  }) => {
+    const {
+      createPage
+    } = actions
     const postTemplate = path.resolve('src/templates/blogPost.js')
+    const tagTemplate = path.resolve('src/templates/tagPosts.js')
 
     return graphql(`
         {
@@ -23,42 +22,40 @@ exports.createPages = ({actions, graphql}) => {
                       title
                       date
                       author
+                      tag
                     }
                   }
                 }
               }
         }
-    `).then(res  => {
-        if(res.errors) {
-            return Promise.reject(res.errors)
+    `).then(res => {
+        if (res.errors) {
+          return Promise.reject(res.errors)
         }
 
-        const posts = res.data.allMarkdownRemark.edges
-        posts.forEach(({node}) => {
+        res.data.allMarkdownRemark.edges.forEach(({
+          node
+        }) => {
+          const posts = res.data.allMarkdownRemark.edges
+          posts.forEach(({
+            node
+          }) => {
+            
             createPage({
-                path: node.frontmatter.path,
-                component: postTemplate
+              path: node.frontmatter.path,
+              component: postTemplate
             })
+          })
+
+          res.data.allMarkdownRemark.edges.forEach(({node}) => {
+            createPage({
+              path: node.frontmatter.tag,
+              component: tagTemplate,
+              context: {
+                tag: node.frontmatter.tag
+              }
+            })
+          })
         })
-
-        // let tags = []
-        // _.each(posts, edge => {
-        //   if (_.get(edge, 'node.frontmatter.tags')) {
-        //     tags = tags.concat(edge.node.frontmatter.tags)
-        //   }
-        // })
-
-        // tags = _.uniq(tags)
-
-        // tags.forEach(tag => (
-        //   createPage({
-        //     path: `/tag/${tag}`,
-        //     component: templates.tagPosts,
-        //     context: {
-        //       tag
-        //     }
-        //   })
-        // ))
-
-    })
-}
+      })
+    }
