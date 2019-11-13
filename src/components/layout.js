@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <SkipNav/>
+      <SkipNav />
       <Nav />
       <main
         style={{
