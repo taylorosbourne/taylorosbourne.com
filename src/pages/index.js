@@ -16,7 +16,7 @@ const ImgRounded = styled.img`
 const InfoContainer = styled.div`
   margin: 55px auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   @media(max-width: 700px) {
     flex-direction: column;
@@ -90,9 +90,14 @@ const Card = styled.div`
   background: rgb(245,245,245);
   padding: 10px 15px;
   border-radius: 5px;
-  -webkit-box-shadow: 0 8px 6px -8px black;
-	   -moz-box-shadow: 0 8px 6px -8px black;
-	        box-shadow: 0 8px 6px -8px black;
+  transition: transform 0.3s ease;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  :hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
   @media(max-width: 700px) {
     width: 100%;
     margin: 15px auto;
@@ -102,7 +107,6 @@ const Card = styled.div`
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
-    <br />
     <br />
     <InfoContainer>
       <ImgRounded src={Portrait} alt="portrait" />
@@ -147,12 +151,12 @@ const IndexPage = ({ data }) => (
     <br/>
     <br/>
     <br/>
-    {data.allMarkdownRemark.edges.map(post => (
+    {data.allMarkdownRemark.edges.map((post, i) => (
       <div
         key={post.node.id}
         style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}
       >
-        <h1>
+        <h2>
           <Link
             style={{
               textDecoration: `none`,
@@ -164,7 +168,7 @@ const IndexPage = ({ data }) => (
           >
             {post.node.frontmatter.title}
           </Link>
-        </h1>
+        </h2>
         <h4>
           Time to{" "}
           <span role="img" aria-label="read">
@@ -175,13 +179,13 @@ const IndexPage = ({ data }) => (
         <small>{post.node.frontmatter.date}</small>
         <br />
         <br />
-        <p>
+        <div>
           <PostBody
             dangerouslySetInnerHTML={{
-              __html: post.node.html.slice(0, 550) + "...",
+              __html: post.node.html.slice(0, 200) + "...",
             }}
           />
-        </p>
+        </div>
         <StyledLink to={post.node.frontmatter.path}>Read More</StyledLink>
         <br />
         <br />
@@ -192,6 +196,7 @@ const IndexPage = ({ data }) => (
           </Tag>
         </h5>
         <br />
+        {i === data.allMarkdownRemark.edges.length - 1 ? null : <hr/> }
         <br />
       </div>
     ))}

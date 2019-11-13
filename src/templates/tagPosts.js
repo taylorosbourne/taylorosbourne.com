@@ -43,7 +43,7 @@ const tagPosts = ({ data, pageContext }) => {
           key={post.node.id}
           style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}
         >
-          <h1>
+          <h2>
             <Link
               style={{
                 textDecoration: `none`,
@@ -56,17 +56,17 @@ const tagPosts = ({ data, pageContext }) => {
             >
               {post.node.frontmatter.title}
             </Link>
-          </h1>
+          </h2>
           <small>{post.node.frontmatter.date}</small>
           <br />
           <br />
-          <p>
+          <div>
             <PostBody
               dangerouslySetInnerHTML={{
                 __html: post.node.html.slice(0, 500) + "...",
               }}
             />
-          </p>
+          </div>
           <Link
             style={{
               textDecoration: `none`,
@@ -94,6 +94,7 @@ const tagPosts = ({ data, pageContext }) => {
             </span>
           </h5>
           <br />
+          {i === data.allMarkdownRemark.edges.length - 1 ? null : <hr/> }
           <br />
         </div>
       ))}
