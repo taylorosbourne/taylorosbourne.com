@@ -1,27 +1,28 @@
-import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import PostList from "../components/postList"
-import Portrait from "../images/portrait.jpg"
-import { StyledAnchorLink } from "../styles/Link"
-
-const ImgRounded = styled.img`
-  height: 200px;
-  width: 200px;
-  border-radius: 5px;
-`
+import React from 'react';
+import { graphql } from 'gatsby';
+import styled from 'styled-components';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import PostList from '../components/postList';
+import { StyledAnchorLink } from '../styles/Link';
 
 const InfoContainer = styled.div`
   margin: 55px auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   @media (max-width: 700px) {
     flex-direction: column;
   }
-`
+`;
+
+const Spiel = styled.div`
+  max-width: 50%;
+  @media (max-width: 700px) {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+`;
 
 const InfoList = styled.ul`
   li {
@@ -31,7 +32,7 @@ const InfoList = styled.ul`
       margin-left: -25px;
     }
   }
-`
+`;
 
 const ExperienceSection = styled.div`
   display: flex;
@@ -41,7 +42,7 @@ const ExperienceSection = styled.div`
     flex-direction: column;
     margin: 0 auto;
   }
-`
+`;
 
 const Card = styled.div`
   width: 48%;
@@ -60,17 +61,19 @@ const Card = styled.div`
     width: 100%;
     margin: 15px auto;
   }
-`
+`;
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
-
   return (
     <Layout>
       <SEO title="Home" />
       <br />
       <InfoContainer>
-        <ImgRounded src={Portrait} alt="portrait" />
+        <Spiel>
+          <h1 style={{ marginTop: 0 }}>Hi, I'm Taylor</h1>
+          <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>I'm a full-stack Javascript Dev with a soft-spot for Ruby.  I like to write about being a developer today.</p>
+        </Spiel>
         <InfoList>
           <li>
             <span role="img" aria-label="ageAndPronouns">
@@ -180,8 +183,8 @@ const IndexPage = ({ data }) => {
       <br />
       <PostList posts={posts} />
     </Layout>
-  )
-}
+  );
+};
 
 export const ALL_POSTS_QUERY = graphql`
   query ALL_POSTS_QUERY {
@@ -201,6 +204,6 @@ export const ALL_POSTS_QUERY = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexPage
+export default IndexPage;
