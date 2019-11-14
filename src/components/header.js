@@ -1,7 +1,7 @@
-import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
-import { StyledLink } from '../styles/Link';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import { StyledGatsbyLink } from '../styles/Link';
 
 const Header = ({ siteTitle }) => (
   <header

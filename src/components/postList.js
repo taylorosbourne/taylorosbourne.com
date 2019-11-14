@@ -1,22 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { StyledLink } from '../styles/Link';
+import { StyledGatsbyLink, Tag } from '../styles/Link';
 import { PostBody } from '../styles/Post';
-
-const Tag = styled(Link)`
-  background: rgb(242, 242, 242);
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  color: #173449;
-  font-family: Arial;
-  transition: all 0.1s ease-in-out;
-  :hover {
-    background: #173449;
-    color: rgb(242, 242, 242);
-  }
-`;
 
 const PostList = ({ posts }) => (
   <>
@@ -57,7 +42,7 @@ const PostList = ({ posts }) => (
             }}
           />
         </div>
-        <StyledLink to={post.node.frontmatter.path}>Read More</StyledLink>
+        <StyledGatsbyLink to={post.node.frontmatter.path}>Read More</StyledGatsbyLink>
         <br />
         <br />
         <h5>

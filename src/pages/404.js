@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { StyledLink } from '../styles/Link';
+import { StyledGatsbyLink } from '../styles/Link';
 
 const UhOh = styled.h1`
   font-size: 150px;
@@ -29,10 +29,10 @@ const NotFoundPage = () => (
       <p>You fucked up</p>
       <p>
         back to the 
-        <StyledLink to="/" id="main">
+        <StyledGatsbyLink to="/" id="main">
           good stuff 
           <span role="img" aria-label="rocket">🚀</span>
-        </StyledLink>
+        </StyledGatsbyLink>
       </p>
     </div>
   </Layout>
