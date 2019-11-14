@@ -2,14 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SkipNavCon = styled.div`
-    width: 100vw;
-    position: absolute;
-    top: 15px;
-    left: 0;
+    width: 240px;
+    margin: 15px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-`
+`;
 
 const SkipNavButton = styled.a`
     padding: 10px 20px;
@@ -24,12 +22,12 @@ const SkipNavButton = styled.a`
     :focus {
         opacity: 1;
     }
-`
+`;
 
 const SkipNav = () => (
     <SkipNavCon>
         <SkipNavButton href="#main" alt="skip-nav">Skip Navigation</SkipNavButton>
     </SkipNavCon>
-)
+);
 
-export default SkipNav
+export default SkipNav;

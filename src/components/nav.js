@@ -3,9 +3,9 @@ import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StyledNav = styled.nav`
-    padding: 105px 1.0875rem 1.45rem;
+    padding: 5px 1.0875rem 1.45rem;
     max-width: 800px;
-    height: 80px;
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,7 @@ const StyledNav = styled.nav`
     @media(max-width: 850px) {
         max-width: 90%;
     }
-`
+`;
 
 const Nav = () => (
     <StyledNav>

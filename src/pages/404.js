@@ -6,6 +6,7 @@ import { StyledLink } from '../styles/Link';
 
 const UhOh = styled.h1`
   font-size: 150px;
+  margin-top: -70px;
   @media(max-width: 800px){
     font-size: 100px;
   }
@@ -22,9 +23,17 @@ const NotFoundPage = () => (
       marginTop: `150px`
     }}>
       <UhOh>UH-OH</UhOh>
-      <h1 style={{fontSize: `100px`}}><span role="img" aria-label="facepalm">🤦‍♂️</span></h1>
+      <h1 style={{fontSize: `100px`}}>
+        <span role="img" aria-label="facepalm">🤦‍♂️</span>
+      </h1>
       <p>You fucked up</p>
-      <p>back to the <StyledLink to="/">articles</StyledLink></p>
+      <p>
+        back to the 
+        <StyledLink to="/" id="main">
+          good stuff 
+          <span role="img" aria-label="rocket">🚀</span>
+        </StyledLink>
+      </p>
     </div>
   </Layout>
 );
