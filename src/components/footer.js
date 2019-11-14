@@ -18,7 +18,7 @@ const Footer = () => (
         ☕
       </span>
       , and{" "}
-      <StyledAnchorLink href="https://www.gatsbyjs.org/" target="_blank" alt="gatsby-js">
+      <StyledAnchorLink href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer" alt="gatsby-js">
         Gatsby
       </StyledAnchorLink>
       .
