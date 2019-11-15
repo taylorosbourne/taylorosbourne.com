@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-// import Form from '../components/form'
+import Form from '../components/form'
 import PostList from '../components/postList';
 import { StyledAnchorLink } from '../styles/Link';
 
@@ -183,7 +183,8 @@ const IndexPage = ({ data }) => {
       </ExperienceSection>
       <br />
       <PostList posts={posts} />
-      {/* <Form /> */}
+      <h2>Want to chat?</h2>
+      <Form />
     </Layout>
   );
 };
