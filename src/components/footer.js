@@ -1,17 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
 import { StyledAnchorLink } from '../styles/Link';
 
+const StyledFooter = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  @media(max-width: 700px) {
+    flex-direction: column;
+  }
+`; 
+
 const Footer = () => (
-  <footer
-    style={{
-      display: `flex`,
-      justifyContent: `space-between`,
-      alignItems: `center`,
-      maxWidth: 800,
-      margin: `0 auto`
-    }}
-  >
-    <p style={{ maxWidth: 500 }}>
+  <StyledFooter>
+    <p>
       Made with{" "}
       <span aria-label="love" role="img">
         ❤️
@@ -26,8 +30,8 @@ const Footer = () => (
       </StyledAnchorLink>
       .
     </p>
-    <p style={{marginTop: `-15px`}}>&#169; Taylor Osbourne 2019</p>
-  </footer>
+    <p>&#169; Taylor Osbourne 2019</p>
+  </StyledFooter>
 );
 
 export default Footer;
