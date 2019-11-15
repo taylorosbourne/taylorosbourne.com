@@ -8,7 +8,7 @@ import PostList from '../components/postList';
 import { StyledAnchorLink } from '../styles/Link';
 
 const InfoContainer = styled.div`
-  margin: 55px auto;
+  margin: 55px auto 35px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -181,9 +181,9 @@ const IndexPage = ({ data }) => {
           </InfoList>
         </Card>
       </ExperienceSection>
-      <br />
+      <h2 style={{marginTop: `85px`}}>console.blog(<span aria-label="fire" role="img">🔥</span>)</h2>
       <PostList posts={posts} />
-      <h2>Want to chat?</h2>
+      <h2 style={{marginTop: `35px`}}>Want to chat?</h2>
       <Form />
     </Layout>
   );

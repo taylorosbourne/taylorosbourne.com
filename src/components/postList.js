@@ -6,7 +6,6 @@ import { PostBody } from '../styles/Post';
 const PostList = ({ posts }) => (
   <>
     <br />
-    <br />
     {posts.map((post, i) => (
       <div
         key={post.node.id}

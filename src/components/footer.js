@@ -5,7 +5,10 @@ const Footer = () => (
   <footer
     style={{
       display: `flex`,
-      justifyContent: `center`,
+      justifyContent: `space-between`,
+      alignItems: `center`,
+      maxWidth: 800,
+      margin: `0 auto`
     }}
   >
     <p style={{ maxWidth: 500 }}>
@@ -23,6 +26,7 @@ const Footer = () => (
       </StyledAnchorLink>
       .
     </p>
+    <p style={{marginTop: `-15px`}}>&#169; Taylor Osbourne 2019</p>
   </footer>
 );
 
