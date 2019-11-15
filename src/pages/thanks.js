@@ -12,7 +12,7 @@ const UhOh = styled.h1`
   }
 `;
 
-const NotFoundPage = () => (
+const Thanks = () => (
   <Layout>
     <SEO title="404: Not found" />
     <div style={{
@@ -22,11 +22,11 @@ const NotFoundPage = () => (
       height: `60vh`,
       marginTop: `150px`
     }}>
-      <UhOh>UH-OH</UhOh>
+      <UhOh>Thanks</UhOh>
       <h1 style={{fontSize: `100px`}}>
-        <span role="img" aria-label="facepalm">🤦‍♂️</span>
+        <span role="img" aria-label="facepalm">🙌</span>
       </h1>
-      <p>You fucked up</p>
+      <p>I'll get back to you shortly!</p>
       <p>
         back to the 
         <StyledGatsbyLink to="/" id="main">
@@ -38,4 +38,4 @@ const NotFoundPage = () => (
   </Layout>
 );
 
-export default NotFoundPage;
+export default Thanks;
