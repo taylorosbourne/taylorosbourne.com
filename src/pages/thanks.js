@@ -14,7 +14,7 @@ const UhOh = styled.h1`
 
 const Thanks = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="Thanks" />
     <div style={{
       maxWidth: `1000px`,
       margin: `0 auto`,
