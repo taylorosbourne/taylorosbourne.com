@@ -6,6 +6,8 @@ import SEO from '../components/seo';
 import Form from '../components/form'
 import PostList from '../components/postList';
 import { StyledAnchorLink } from '../styles/Link';
+import Header from '../components/header';
+import { siteMetadata } from '../../gatsby-config';
 
 const InfoContainer = styled.div`
   margin: 55px auto 35px;
@@ -66,9 +68,10 @@ const Card = styled.div`
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
+  const { title } = siteMetadata;
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={`${title} - Developer`} />
       <br />
       <InfoContainer>
         <Spiel>

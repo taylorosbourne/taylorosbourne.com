@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { StyledGatsbyLink } from '../styles/Link';
+import { siteMetadata } from '../../gatsby-config';
 
 const UhOh = styled.h1`
   font-size: 150px;
@@ -14,7 +15,7 @@ const UhOh = styled.h1`
 
 const NotFoundPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title={`Page not found - ${siteMetadata.title}`} />
     <div style={{
       maxWidth: `1000px`,
       margin: `0 auto`,

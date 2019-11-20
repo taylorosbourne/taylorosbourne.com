@@ -17,11 +17,11 @@ const Header = ({ siteTitle }) => (
       }}
     >
       <h1 style={{ margin: 0 }}>
-        <StyledLink
+        <StyledGatsbyLink
           to="/"
         >
           {siteTitle}
-        </StyledLink>
+        </StyledGatsbyLink>
       </h1>
     </div>
   </header>
