@@ -183,7 +183,8 @@ const IndexPage = ({ data }) => {
       </ExperienceSection>
       <h2 style={{marginTop: `85px`}}>console.blog(<span aria-label="fire" role="img">🔥</span>)</h2>
       <PostList posts={posts} />
-      <h2 style={{marginTop: `35px`}}>Want to chat?</h2>
+      <h2 style={{marginTop: `35px`}}>Want to chat? <span aria-label="waving" role="img">👋</span></h2>
+      <br/>
       <Form />
     </Layout>
   );
