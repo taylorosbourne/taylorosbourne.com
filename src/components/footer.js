@@ -6,9 +6,9 @@ const StyledFooter = styled.footer`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 800px;
+  max-width: 760px;
   margin: 0 auto;
-  @media(max-width: 700px) {
+  @media(max-width: 800px) {
     flex-direction: column;
   }
 `; 
