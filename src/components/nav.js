@@ -22,7 +22,6 @@ const Nav = () => (
                 paddingTop: `25px`
             }}>
             <Link style={{ textDecoration: `none`, color: `#173449` }} to="/">
-                {/* console.blog( <span aria-label="fire" role="img">🔥</span>) */}
                 Taylor Osbourne
             </Link>
         </h5>
