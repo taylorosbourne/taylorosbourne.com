@@ -18,10 +18,8 @@ const Thanks = () => (
     <SEO title={`${siteMetadata.title} - Thanks`} />
     <div style={{
       maxWidth: `1000px`,
-      margin: `0 auto`,
+      margin: `100px auto`,
       textAlign: `center`,
-      height: `60vh`,
-      marginTop: `150px`
     }}>
       <UhOh>Thanks</UhOh>
       <h1 style={{fontSize: `100px`}}>

@@ -18,10 +18,8 @@ const NotFoundPage = () => (
     <SEO title={`Page not found - ${siteMetadata.title}`} />
     <div style={{
       maxWidth: `1000px`,
-      margin: `0 auto`,
-      textAlign: `center`,
-      height: `60vh`,
-      marginTop: `150px`
+      margin: `100px auto`,
+      textAlign: `center`
     }}>
       <UhOh>UH-OH</UhOh>
       <h1 style={{fontSize: `100px`}}>
