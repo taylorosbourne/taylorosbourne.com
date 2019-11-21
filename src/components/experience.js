@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledAnchorLink } from '../styles/Link';
+import { StyledAnchorLink, StyledGatsbyLink } from '../styles/Link';
 
 const ExperienceContainer = styled.div`
   display: flex;
@@ -103,14 +103,11 @@ const ExperienceSection = () => (
             </li>
             <li style={{ marginLeft: `-25px` }}>Freelance || Developer</li>
             <li>
-              <StyledAnchorLink
-                href="https://drive.google.com/file/d/1gerQVwoyvV74G8M7NWdpn_zGW7ARWogS/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="resume"
+              <StyledGatsbyLink
+                to="/resume"
               >
                 Resume
-              </StyledAnchorLink>
+              </StyledGatsbyLink>
             </li>
           </InfoList>
         </Card>
