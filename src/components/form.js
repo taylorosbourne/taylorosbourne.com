@@ -14,6 +14,23 @@ const Input = styled.input`
   }
 `;
 
+const InputContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media(max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const InputContainerHalf = styled.div`
+  width: 45%;
+  @media(max-width: 800px) {
+    width: 98%
+  }
+`
+
 const Textarea = styled.textarea`
   width: 100%;
   height: 250px;
@@ -55,14 +72,8 @@ const Form = () => (
     }}
   >
     <input type="hidden" name="form-name" value="contact" />
-    <div
-      style={{
-        display: `flex`,
-        justifyContent: `space-between`,
-        alignItems: `flex-start`,
-      }}
-    >
-      <div style={{ width: `45%` }}>
+    <InputContainer>
+      <InputContainerHalf>
         <p>
           <label>
             Your name:
@@ -77,8 +88,8 @@ const Form = () => (
             <Input type="email" name="email" />
           </label>
         </p>
-      </div>
-      <div style={{ width: `45%` }}>
+      </InputContainerHalf>
+      <InputContainerHalf>
         <p>
           <label>
             Message:
@@ -95,8 +106,8 @@ const Form = () => (
             </span>
           </SubmitButton>
         </p>
-      </div>
-    </div>
+      </InputContainerHalf>
+    </InputContainer>
   </form>
 );
 
