@@ -10,6 +10,7 @@ const PostList = ({ posts }) => (
       <div
         key={post.node.id}
         style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}
+        id={i === 0 ? "main" : null}
       >
         <h2>
           <Link
