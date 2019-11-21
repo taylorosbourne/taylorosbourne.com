@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
       <InfoContainer>
         <Spiel>
           <h1 style={{ marginTop: 0 }}>Hi, I'm Taylor</h1>
-          <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>I'm a full-stack Javascript Dev with a soft-spot for Ruby.  I like to write about being a developer today.</p>
+          <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>I'm a full-stack JavaScript Dev with a soft-spot for Ruby.  I like to write about being a developer today.</p>
         </Spiel>
         <InfoList>
           <li>
