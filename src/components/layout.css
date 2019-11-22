@@ -615,6 +615,11 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+h1, h2, h3, h4, h5, h6, p, li {
+  font-family: sans-serif;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
