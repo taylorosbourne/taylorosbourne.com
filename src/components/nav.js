@@ -14,7 +14,7 @@ const StyledNav = styled.nav`
     align-items: center;
     margin: 0 auto;
     @media(max-width: 850px) {
-        max-width: 90%;
+        /* max-width: 90%; */
     }
 `;
 
@@ -95,7 +95,8 @@ const Nav = () => (
                 href="https://taylorosbourne.com/rss.xml"
                 target="_blank"
                 rel="noopener noreferrer"
-                alt="rss">
+                alt="rss"
+                >
                 <img src={rss} alt="rss-feed" />
             </NavIconAnchor>
         </div>
