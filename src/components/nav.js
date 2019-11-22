@@ -31,15 +31,28 @@ const StyledLink = styled(Link)`
     color: #173449;
     font-family: sans-serif;
     font-weight: 700;
+    position: relative;
     :hover {
         span {
             opacity: 1;
-            margin: 0px 5px;
+            margin: 0px 10px;
         }
     }
 `
 
-const Bracket = styled.span`
+const LeftBracket = styled.span`
+    position: absolute;
+    left: -25px;
+    top: -2px;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    color: #f7df1e;
+    font-size: 1.5rem;
+`
+const RightBracket = styled.span`
+    position: absolute;
+    right: -25px;
+    top: -2px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
     color: #f7df1e;
@@ -53,7 +66,7 @@ const rightBracket = `}`
 const Nav = () => (
     <StyledNav>
             <StyledLink to="/">
-                <Bracket>{leftBracket}</Bracket>Taylor Osbourne<Bracket>{rightBracket}</Bracket>
+                <LeftBracket>{leftBracket}</LeftBracket>Taylor Osbourne<RightBracket>{rightBracket}</RightBracket>
             </StyledLink>
         <div
             style={{
