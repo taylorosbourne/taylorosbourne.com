@@ -7,6 +7,8 @@ const TagPostsTemplate = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
+      <br />
+      <br />
       <PostList posts={posts} />
     </Layout>
   );
