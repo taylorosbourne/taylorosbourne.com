@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 const InfoContainer = styled.div`
   margin: 55px auto 35px;
@@ -71,6 +71,6 @@ const GeneralInfo = () => (
       </li>
     </InfoList>
   </InfoContainer>
-)
+);
 
-export default GeneralInfo
+export default GeneralInfo;

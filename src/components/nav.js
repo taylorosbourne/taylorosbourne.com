@@ -13,9 +13,6 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    @media(max-width: 850px) {
-        /* max-width: 90%; */
-    }
 `;
 
 const NavIconAnchor = styled.a`
@@ -24,7 +21,7 @@ const NavIconAnchor = styled.a`
     padding: 5px; 
     background: rgb(242,242,242);
     border-radius: 5px;
-`
+`;
 
 const StyledLink = styled(Link)`
     text-decoration: none;
@@ -38,7 +35,7 @@ const StyledLink = styled(Link)`
             margin: 0px 10px;
         }
     }
-`
+`;
 
 const LeftBracket = styled.span`
     position: absolute;
@@ -48,7 +45,8 @@ const LeftBracket = styled.span`
     transition: all 0.2s ease-in-out;
     color: #f7df1e;
     font-size: 1.5rem;
-`
+`;
+
 const RightBracket = styled.span`
     position: absolute;
     right: -25px;
@@ -57,7 +55,7 @@ const RightBracket = styled.span`
     transition: all 0.2s ease-in-out;
     color: #f7df1e;
     font-size: 1.5rem;
-`
+`;
 
 const leftBracket = `{`
 const rightBracket = `}`

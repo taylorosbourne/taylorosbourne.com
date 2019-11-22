@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import { siteMetadata } from '../../gatsby-config';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import Form from '../components/form'
+import Form from '../components/form';
 import PostList from '../components/postList';
 import GeneralInfo from '../components/generalInfo';
 import ExperienceSection from '../components/experience';

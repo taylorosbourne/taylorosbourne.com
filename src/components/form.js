@@ -29,7 +29,7 @@ const InputContainerHalf = styled.div`
   @media(max-width: 800px) {
     width: 98%
   }
-`
+`;
 
 const Textarea = styled.textarea`
   width: 100%;

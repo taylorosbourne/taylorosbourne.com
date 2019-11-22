@@ -1,9 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import download from "downloadjs"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { siteMetadata } from "../../gatsby-config"
+import React from 'react';
+import styled from 'styled-components';
+import download from 'downloadjs';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
+import Form from '../components/form';
+import { siteMetadata } from '../../gatsby-config';
 
 const Button = styled.button`
   border-radius: 5px;
@@ -19,7 +20,7 @@ const Button = styled.button`
     background: #173449;
     color: rgb(242, 242, 242);
   }
-`
+`;
 
 const text = `
 Taylor Osbourne
@@ -81,7 +82,7 @@ Skills
   MongoDB
   Git
   Bash
-`
+`;
 
 const Resume = () => (
   <Layout>
@@ -172,7 +173,10 @@ const Resume = () => (
         Download
       </Button>
     </div>
+    <h2 style={{ marginTop: `35px` }}>Want to hire me? <span aria-label="waving" role="img">👋</span></h2>
+      <br />
+      <Form />
   </Layout>
-)
+);
 
-export default Resume
+export default Resume;

@@ -27,6 +27,6 @@ const PostBody = styled.div`
     transform: scaleX(1); 
   }
 }
-`
+`;
 
-export { PostBody }
+export { PostBody };

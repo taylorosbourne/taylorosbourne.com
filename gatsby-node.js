@@ -1,5 +1,5 @@
-const { createFilePath } = require(`gatsby-source-filesystem`)
-const path = require('path')
+const { createFilePath } = require(`gatsby-source-filesystem`);
+const path = require('path');
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -9,19 +9,14 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: `slug`,
       node,
       value,
-    })
-  }
-}
+    });
+  };
+};
 
-exports.createPages = ({
-  actions,
-  graphql
-}) => {
-  const {
-    createPage
-  } = actions
-  const postTemplate = path.resolve('src/templates/blogPost.js')
-  const tagTemplate = path.resolve('src/templates/tagPosts.js')
+exports.createPages = ({ actions, graphql }) => {
+  const { createPage } = actions;
+  const postTemplate = path.resolve('src/templates/blogPost.js');
+  const tagTemplate = path.resolve('src/templates/tagPosts.js');
 
   return graphql(`
         {
@@ -44,12 +39,10 @@ exports.createPages = ({
     `).then(res => {
     if (res.errors) {
       return Promise.reject(res.errors)
-    }
+    };
 
-    res.data.allMarkdownRemark.edges.forEach(({
-      node
-    }) => {
-      const posts = res.data.allMarkdownRemark.edges
+    res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const posts = res.data.allMarkdownRemark.edges;
       posts.forEach(({
         node
       }) => {
@@ -57,8 +50,8 @@ exports.createPages = ({
         createPage({
           path: node.frontmatter.path,
           component: postTemplate
-        })
-      })
+        });
+      });
 
       res.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
@@ -67,8 +60,8 @@ exports.createPages = ({
           context: {
             tag: node.frontmatter.tag
           }
-        })
-      })
-    })
-  })
-}
+        });
+      });
+    });
+  });
+};
