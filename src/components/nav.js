@@ -78,9 +78,13 @@ const Nav = () => (
                 >
                 <img src={linkedin} alt="linkedin" />
             </NavIconAnchor>
-            <Link to="/rss.xml" style={{height: `30px`, width: `30px`, padding: `5px`, background: `rgb(242,242,242)`, borderRadius: `5px`}}>
+            <NavIconAnchor
+                href="https://taylorosbourne.com/rss.xml"
+                target="_blank"
+                rel="noopener noreferrer"
+                alt="rss">
                 <img src={rss} alt="rss-feed" />
-            </Link>
+            </NavIconAnchor>
         </div>
     </StyledNav>
 );
