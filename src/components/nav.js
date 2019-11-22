@@ -26,13 +26,35 @@ const NavIconAnchor = styled.a`
     border-radius: 5px;
 `
 
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: #173449;
+    font-family: sans-serif;
+    font-weight: 700;
+    :hover {
+        span {
+            opacity: 1;
+            margin: 0px 5px;
+        }
+    }
+`
+
+const Bracket = styled.span`
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    color: #f7df1e;
+    font-size: 1.5rem;
+`
+
+const leftBracket = `{`
+const rightBracket = `}`
+
+
 const Nav = () => (
     <StyledNav>
-        <h5>
-            <Link style={{ textDecoration: `none`, color: `#173449` }} to="/">
-                Taylor Osbourne
-            </Link>
-        </h5>
+            <StyledLink to="/">
+                <Bracket>{leftBracket}</Bracket>Taylor Osbourne<Bracket>{rightBracket}</Bracket>
+            </StyledLink>
         <div
             style={{
                 display: `flex`,
