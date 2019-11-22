@@ -90,7 +90,7 @@ const Resume = () => (
     <div
       style={{
         maxWidth: `1000px`,
-        margin: `100px auto`,
+        margin: `80px auto`,
       }}
     >
       <h1 id="main">Taylor Osbourne</h1>
