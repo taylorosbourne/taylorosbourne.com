@@ -50,12 +50,12 @@ const ExperienceSection = () => (
               <a
                 id="main"
                 style={{ color: `#000` }}
-                href="https://www.autoclaimsassistance.com/"
+                href="https://chrome.google.com/webstore/detail/yante/cdadmhaleiandaodcgnlaebdijngpmhn"
                 target="_blank"
                 rel="noopener noreferrer"
                 alt="aca"
               >
-                www.autoclaimsassistance.com
+                yante
               </a>
             </li>
             <li>
