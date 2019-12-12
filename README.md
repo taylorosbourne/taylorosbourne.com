@@ -6,7 +6,6 @@
 ## Acknowledgements
 
 - [Dan Abramov](https://overreacted.io/) this site is heavily ~~ripped-off~~ inspired by his site.
-- [Iconmonstr](https://iconmonstr.com/) for social icons.
 - [Netlify](https://www.netlify.com/) for hosting.
 - [Gatsby](https://www.gatsbyjs.org/) for being awesome.
 
