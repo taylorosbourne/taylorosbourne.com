@@ -1,7 +1,7 @@
 ---
 path: "/sorbet-is-sweet"
 date: "2019-11-04"
-title: "Sorbet is sweet: Static Type Checking for Ruby"
+title: "Sorbet is Sweet: Static Type Checking for Ruby"
 author: "Taylor Osbourne"
 tag: "ruby"
 ---

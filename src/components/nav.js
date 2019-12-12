@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-import rss from '../images/rss.svg';
-import github from '../images/github.svg';
-import linkedin from '../images/linkedin.svg';
+import DarkModeToggle from './DarkModeToggle';
 
 const StyledNav = styled.nav`
     padding: 5px 1.0875rem 1.45rem;
@@ -15,22 +13,14 @@ const StyledNav = styled.nav`
     margin: 0 auto;
 `;
 
-const NavIconAnchor = styled.a`
-    height: 30px; 
-    width: 30px;
-    padding: 5px; 
-    background: rgb(242,242,242);
-    border-radius: 5px;
-`;
-
 const StyledLink = styled(Link)`
     text-decoration: none;
-    color: #173449;
+    color: rgb(101, 170, 161);
     font-family: sans-serif;
     font-weight: 700;
     position: relative;
     :hover {
-        span {
+        span:not(.fire) {
             opacity: 1;
             margin: 0px 10px;
         }
@@ -63,41 +53,12 @@ const rightBracket = `}`
 
 const Nav = () => (
     <StyledNav>
-            <StyledLink to="/">
-                <LeftBracket>{leftBracket}</LeftBracket>Taylor Osbourne<RightBracket>{rightBracket}</RightBracket>
+            <StyledLink to="/" className="home-link">
+                <LeftBracket>{leftBracket}</LeftBracket>
+                console.blog{"("}{" "}<span className="fire" aria-label="fire" role="img">🔥</span>{")"}
+                <RightBracket>{rightBracket}</RightBracket>
             </StyledLink>
-        <div
-            style={{
-                display: `flex`,
-                justifyContent: `space-around`,
-                alignItems: `center`,
-                width: `100px`
-            }}>
-            <NavIconAnchor
-                href="https://github.com/taylorosbourne"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="github"
-                >
-                <img src={github} alt="github" />
-            </NavIconAnchor>
-            <NavIconAnchor
-                href="https://www.linkedin.com/in/taylor-osbourne/"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="linkedin"
-                >
-                <img src={linkedin} alt="linkedin" />
-            </NavIconAnchor>
-            <NavIconAnchor
-                href="https://taylorosbourne.com/rss.xml"
-                target="_blank"
-                rel="noopener noreferrer"
-                alt="rss"
-                >
-                <img src={rss} alt="rss-feed" />
-            </NavIconAnchor>
-        </div>
+            <DarkModeToggle />
     </StyledNav>
 );
 

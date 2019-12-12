@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { StyledAnchorLink } from '../styles/Link';
+import Octicon, { Octoface, Rss } from "@primer/octicons-react"
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -9,27 +9,39 @@ const StyledFooter = styled.footer`
   max-width: 760px;
   margin: 0 auto;
   @media(max-width: 800px) {
-    flex-direction: column;
+    max-width: 90%;
   }
 `; 
 
 const Footer = () => (
   <StyledFooter>
-    <p>
-      Made with{" "}
-      <span aria-label="love" role="img">
-        ❤️
-      </span>
-      ,{" "}
-      <span aria-label="coffee" role="img" style={{ fontSize: `1.3rem` }}>
-        ☕
-      </span>
-      , and{" "}
-      <StyledAnchorLink href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer" alt="gatsby-js">
-        Gatsby
-      </StyledAnchorLink>
-      .
-    </p>
+     <div
+        style={{
+          width: `70px`,
+          display: `flex`,
+          justifyContent: `space-between`,
+          alignItems: `center`,
+          marginBottom: `25px`
+        }}
+      >
+        <a
+          href="https://github.com/taylorosbourne"
+          target="_blank"
+          rel="noopener noreferrer"
+          alt="github"
+        >
+          <Octicon icon={Octoface} size="medium" />
+        </a>
+        <a
+          href="https://taylorosbourne.com/rss.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+          alt="rss"
+          style={{ transform:  `scale(1.25) rotate(3deg)` }}
+        >
+          <Octicon icon={Rss} size="medium" />
+        </a>
+      </div>
     <p>&#169; Taylor Osbourne 2019</p>
   </StyledFooter>
 );
