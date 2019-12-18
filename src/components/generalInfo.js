@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react';
+import styled from 'styled-components';
 
 const InfoContainer = styled.div`
   margin: 55px auto 35px;
@@ -9,7 +9,7 @@ const InfoContainer = styled.div`
   @media (max-width: 700px) {
     flex-direction: column;
   }
-`
+`;
 
 const Spiel = styled.div`
   max-width: 50%;
@@ -17,7 +17,7 @@ const Spiel = styled.div`
     max-width: 90%;
     margin: 0 auto;
   }
-`
+`;
 
 const InfoList = styled.ul`
   li {
@@ -27,7 +27,7 @@ const InfoList = styled.ul`
       margin-left: -25px;
     }
   }
-`
+`;
 
 const GeneralInfo = () => (
   <InfoContainer>
@@ -40,37 +40,37 @@ const GeneralInfo = () => (
     </Spiel>
     <InfoList>
       <li>
-        <span role="img" aria-label="ageAndPronouns">
+        <span role="img" aria-label="age-and-pronouns">
           🚀
-        </span>{" "}
+        </span>{' '}
         26-years-old. He/Him
       </li>
       <li>
         <span role="img" aria-label="family">
           👨‍👩‍👧
-        </span>{" "}
-        Husband {"&"} Proud Step-Dad
+        </span>{' '}
+        Husband {'&'} Proud Step-Dad
       </li>
       <li>
         <span role="img" aria-label="job">
           💻
-        </span>{" "}
+        </span>{' '}
         Full-Stack Dev
       </li>
       <li>
         <span role="img" aria-label="hobby">
           🧰
-        </span>{" "}
+        </span>{' '}
         Tinkerer
       </li>
       <li>
         <span role="img" aria-label="gamer">
           🎮
-        </span>{" "}
+        </span>{' '}
         Gamer
       </li>
     </InfoList>
   </InfoContainer>
-)
+);
 
-export default GeneralInfo
+export default GeneralInfo;

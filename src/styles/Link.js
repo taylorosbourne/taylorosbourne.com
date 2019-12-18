@@ -1,11 +1,11 @@
-import {Link} from 'gatsby';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 
 const StyledGatsbyLink = styled(Link)`
-    text-decoration: none;
-    color: rgb(101, 170, 161);
-    color: rgb(74, 157, 248);
-    font-weight: bold;
+  text-decoration: none;
+  color: rgb(101, 170, 161);
+  color: rgb(74, 157, 248);
+  font-weight: bold;
 `;
 
 const StyledAnchorLink = styled.a`
@@ -16,7 +16,7 @@ const StyledAnchorLink = styled.a`
   font-family: Arial;
   position: relative;
   :before {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 2px;
@@ -40,7 +40,7 @@ const Tag = styled(Link)`
   color: rgb(18, 27, 39);
   color: rgb(101, 170, 161);
   color: rgb(74, 157, 248);
-  background:rgb(242,242,242);
+  background: rgb(242, 242, 242);
   border: 0;
   padding: 10px;
   border-radius: 5px;
@@ -49,7 +49,7 @@ const Tag = styled(Link)`
   transition: all 0.1s ease-in-out;
   :hover {
     background: rgb(101, 170, 161);
-    color:rgb(242,242,242);
+    color: rgb(242, 242, 242);
   }
 `;
 

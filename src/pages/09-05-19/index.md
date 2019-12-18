@@ -1,9 +1,9 @@
 ---
-path: "/rethinking-react"
-date: "2019-09-05"
+path: '/rethinking-react'
+date: '2019-09-05'
 title: "Screw 'this': Ditching Classes for Functions and Hooks"
-author: "Taylor Osbourne"
-tag: "react"
+author: 'Taylor Osbourne'
+tag: 'react'
 ---
 
 Prepare yourself, you're about to experience a 'back-in-my-day' moment. Ahemm,

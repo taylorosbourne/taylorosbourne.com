@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/layout';
-import PostList from '../components/postList';
+import Layout from '../components/Layout';
+import PostList from '../components/PostList';
 
 const TagPostsTemplate = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;

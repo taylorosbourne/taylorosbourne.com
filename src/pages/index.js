@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { siteMetadata } from '../../gatsby-config';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import PostList from '../components/postList';
-import GeneralInfo from '../components/generalInfo'
+import Layout from '../components/Layout';
+import SEO from '../components/Seo';
+import PostList from '../components/PostList';
+import GeneralInfo from '../components/GeneralInfo';
 
 const IndexPage = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;

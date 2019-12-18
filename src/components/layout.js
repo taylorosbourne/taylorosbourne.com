@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './layout.css';
-import SkipNav from './skipNav';
-import Nav from './nav';
-import Footer from './footer';
+import SkipNav from './SkipNav';
+import Nav from './Nav';
+import Footer from './Footer';
+import '../styles/layout.css';
 
 const Layout = ({ children }) => (
   <>
@@ -14,9 +14,11 @@ const Layout = ({ children }) => (
         margin: `0 auto`,
         maxWidth: 800,
         padding: `0px 1.0875rem 1.45rem`,
-        paddingTop: 0
+        paddingTop: 0,
       }}
-    >{children}</main>
+    >
+      {children}
+    </main>
     <Footer />
   </>
 );

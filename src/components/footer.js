@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Octicon, { Octoface, Rss } from "@primer/octicons-react"
+import Octicon, { Octoface, Rss } from '@primer/octicons-react';
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -8,41 +8,45 @@ const StyledFooter = styled.footer`
   align-items: center;
   max-width: 760px;
   margin: 0 auto;
-  @media(max-width: 800px) {
+  @media (max-width: 800px) {
     max-width: 90%;
   }
-`; 
+`;
 
 const Footer = () => (
   <StyledFooter>
-     <div
+    <div
+      style={{
+        width: `70px`,
+        display: `flex`,
+        justifyContent: `space-between`,
+        alignItems: `center`,
+        marginBottom: `25px`,
+      }}
+    >
+      <a
+        href="https://github.com/taylorosbourne"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="github"
+        style={{ textDecoration: `none`, color: `rgb(74, 157, 248)` }}
+      >
+        <Octicon icon={Octoface} size="medium" />
+      </a>
+      <a
+        href="https://taylorosbourne.com/rss.xml"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="rss"
         style={{
-          width: `70px`,
-          display: `flex`,
-          justifyContent: `space-between`,
-          alignItems: `center`,
-          marginBottom: `25px`
+          transform: `scale(1.25) rotate(1deg)`,
+          textDecoration: `none`,
+          color: `rgb(74, 157, 248)`,
         }}
       >
-        <a
-          href="https://github.com/taylorosbourne"
-          target="_blank"
-          rel="noopener noreferrer"
-          alt="github"
-          style={{ textDecoration: `none`,  color: `rgb(74, 157, 248)` }}
-        >
-          <Octicon icon={Octoface} size="medium" />
-        </a>
-        <a
-          href="https://taylorosbourne.com/rss.xml"
-          target="_blank"
-          rel="noopener noreferrer"
-          alt="rss"
-          style={{ transform:  `scale(1.25) rotate(1deg)`, textDecoration: `none`,  color: `rgb(74, 157, 248)` }}
-        >
-          <Octicon icon={Rss} size="medium" />
-        </a>
-      </div>
+        <Octicon icon={Rss} size="medium" />
+      </a>
+    </div>
     <p>&#169; Taylor Osbourne 2019</p>
   </StyledFooter>
 );
