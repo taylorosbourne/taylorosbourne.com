@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SkipNav from './SkipNav';
-import Nav from './Nav';
-import Footer from './Footer';
+import SkipNav from './skipNav';
+import Nav from './nav';
+import Footer from './footer';
 import '../styles/layout.css';
 
 const Layout = ({ children }) => (

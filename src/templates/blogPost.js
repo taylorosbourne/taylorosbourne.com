@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import BlogPost from '../components/BlogPost';
+import Layout from '../components/layout';
+import BlogPost from '../components/blogPost';
 
 const BlogPostTemplate = ({ data }) => {
   const { html: __html } = data.markdownRemark;
