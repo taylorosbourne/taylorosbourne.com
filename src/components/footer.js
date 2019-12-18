@@ -29,6 +29,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           alt="github"
+          style={{ textDecoration: `none`,  color: `rgb(74, 157, 248)` }}
         >
           <Octicon icon={Octoface} size="medium" />
         </a>
@@ -37,7 +38,7 @@ const Footer = () => (
           target="_blank"
           rel="noopener noreferrer"
           alt="rss"
-          style={{ transform:  `scale(1.25) rotate(3deg)` }}
+          style={{ transform:  `scale(1.25) rotate(1deg)`, textDecoration: `none`,  color: `rgb(74, 157, 248)` }}
         >
           <Octicon icon={Rss} size="medium" />
         </a>

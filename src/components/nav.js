@@ -15,7 +15,7 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled(Link)`
     text-decoration: none;
-    color: rgb(101, 170, 161);
+    color: rgb(74, 157, 248);
     font-family: sans-serif;
     font-weight: 700;
     position: relative;

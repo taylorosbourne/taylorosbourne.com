@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const PostBody = styled.div`
   a {
     text-decoration: none;
-    color: rgb(74, 157, 248);
     color: rgb(101, 170, 161);
+    color: rgb(74, 157, 248);
     font-weight: bold;
     font-family: Arial;
     position: relative;

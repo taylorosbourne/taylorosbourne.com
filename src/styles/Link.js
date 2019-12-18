@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 const StyledGatsbyLink = styled(Link)`
     text-decoration: none;
-    color: rgb(74, 157, 248);
     color: rgb(101, 170, 161);
+    color: rgb(74, 157, 248);
     font-weight: bold;
 `;
 
 const StyledAnchorLink = styled.a`
   text-decoration: none;
-  color: rgb(74, 157, 248);
   color: rgb(101, 170, 161);
+  color: rgb(74, 157, 248);
   font-weight: bold;
   font-family: Arial;
   position: relative;
@@ -39,6 +39,7 @@ const StyledAnchorLink = styled.a`
 const Tag = styled(Link)`
   color: rgb(18, 27, 39);
   color: rgb(101, 170, 161);
+  color: rgb(74, 157, 248);
   background:rgb(242,242,242);
   border: 0;
   padding: 10px;
