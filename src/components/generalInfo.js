@@ -9,13 +9,14 @@ const InfoContainer = styled.div`
   font-weight: 200;
   @media (max-width: 700px) {
     flex-direction: column;
+
   }
 `;
 
 const Spiel = styled.div`
   max-width: 50%;
   @media (max-width: 700px) {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
   }
 `;
@@ -24,6 +25,9 @@ const InfoList = styled.ul`
   li {
     list-style: none;
     line-height: 1;
+    @media (max-width: 700px) {
+      margin-left: -28px;
+    }
     a {
       margin-left: -25px;
     }
@@ -33,13 +37,16 @@ const InfoList = styled.ul`
 const GeneralInfo = () => (
   <InfoContainer>
     <Spiel>
-      <h1 style={{ marginTop: 0, fontWeight: `200`, color: `#b58900` }}>Hi, I'm Taylor</h1>
+      <h2 style={{ marginTop: 0, fontWeight: `200`, color: `#b58900`, borderBottom: `3px #dc322f dashed`, width: `205px`, paddingBottom: `5px` }}>Hi, I'm Taylor</h2>
       <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>
         I'm a full-stack JavaScript Dev with a soft-spot for Ruby. I like to
         write about being a developer today.
       </p>
     </Spiel>
     <InfoList>
+      <li>
+        <h2 style={{ marginTop: 0, fontWeight: `200`, color: `#b58900`, borderBottom: `3px #dc322f dashed`, width: `205px`, paddingBottom: `5px`, marginBottom: `25px` }}>in a nut-shell...</h2>
+      </li>
       <li>
         <span role="img" aria-label="age-and-pronouns">
           🚀

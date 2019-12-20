@@ -8,7 +8,11 @@ const PostList = ({ posts }) => (
     {posts.map((post, i) => (
       <div
         key={post.node.id}
-        style={{ fontFamily: `Arial`, maxWidth: `1000px`, margin: `0 auto` }}
+        style={{ 
+          fontFamily: `Arial`, 
+          maxWidth: `1000px`, 
+          margin: `0 auto 15px`, 
+        }}
         id={i === 0 ? 'main' : null}
       >
         <h2 className="article-title">
@@ -17,7 +21,7 @@ const PostList = ({ posts }) => (
           </StyledGatsbyLink>
         </h2>
         <small>
-          {post.node.frontmatter.date} Time to{' '}
+          <span style={{color: `#6c71c4`}}>{post.node.frontmatter.date}</span> Time to{' '}
           <span role="img" aria-label="read">
             📖
           </span>
@@ -41,7 +45,6 @@ const PostList = ({ posts }) => (
             {post.node.frontmatter.tag}
           </Tag>
         </h5>
-        <br />
         <br />
       </div>
     ))}

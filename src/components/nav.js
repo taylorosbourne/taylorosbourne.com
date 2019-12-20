@@ -19,11 +19,21 @@ const StyledLink = styled(Link)`
   font-family: sans-serif;
   font-weight: 200;
   position: relative;
+  transition: 0.3s ease;
+  font-size: 1.35rem;
   :hover {
+    transform: rotate(-5deg);
+    font-size: 2rem;
+    animation: 0.5s infinite linear wiggle;
     span:not(.fire) {
       opacity: 1;
-      margin: 0px 10px;
+      margin: 0px 5px;
     }
+  }
+  @keyframes wiggle {
+    0% {transform: rotate(-3deg)}
+    50% {transform: rotate(-7deg)}
+    100% {transform: rotate(-3deg)}
   }
 `;
 
@@ -33,8 +43,8 @@ const LeftBracket = styled.span`
   top: -2px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-  color: #f7df1e;
-  font-size: 1.5rem;
+  color: #b58900;
+  font-size: 2.5rem;
   font-weight: 700;
 `;
 
@@ -44,8 +54,8 @@ const RightBracket = styled.span`
   top: -2px;
   opacity: 0;
   transition: all 0.2s ease-in-out;
-  color: #f7df1e;
-  font-size: 1.5rem;
+  color: #b58900;
+  font-size: 2.5rem;
   font-weight: 700;
 `;
 
@@ -56,7 +66,7 @@ const Nav = () => (
   <StyledNav>
     <StyledLink to="/" className="home-link">
       <LeftBracket>{leftBracket}</LeftBracket>
-      console.blog{'('}{' '}
+      console.blog{'('}
       <span className="fire" aria-label="fire" role="img">
         🔥
       </span>
