@@ -25,6 +25,11 @@ const StyledLink = styled(Link)`
     transform: rotate(-5deg);
     font-size: 2rem;
     animation: 0.4s infinite linear wiggle;
+    @media(max-width: 1000px) {
+      animation: none;
+      font-size: 1.35rem;
+      transform: rotate(0deg);
+    }
     span:not(.fire) {
       opacity: 1;
       margin: 0px 5px;
