@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Octicon, { Octoface, Rss } from '@primer/octicons-react';
 
 const StyledFooter = styled.footer`
   display: flex;
@@ -8,6 +7,8 @@ const StyledFooter = styled.footer`
   align-items: center;
   max-width: 760px;
   margin: 0 auto;
+  margin-top: 15px;
+  font-weight: 200;
   @media (max-width: 800px) {
     max-width: 90%;
   }
@@ -29,9 +30,14 @@ const Footer = () => (
         target="_blank"
         rel="noopener noreferrer"
         alt="github"
-        style={{ textDecoration: `none`, color: `rgb(74, 157, 248)` }}
+        style={{ 
+          color: `#b58900`, 
+          marginRight: `15px`,
+          textDecoration: `none`,
+          borderBottom: `3px #dc322f dashed`,
+        }}
       >
-        <Octicon icon={Octoface} size="medium" />
+        Github
       </a>
       <a
         href="https://taylorosbourne.com/rss.xml"
@@ -39,12 +45,26 @@ const Footer = () => (
         rel="noopener noreferrer"
         alt="rss"
         style={{
-          transform: `scale(1.25) rotate(1deg)`,
+          marginRight: `15px`,
           textDecoration: `none`,
-          color: `rgb(74, 157, 248)`,
+          borderBottom: `3px #dc322f dashed`,
+          color: `#b58900`,
         }}
       >
-        <Octicon icon={Rss} size="medium" />
+        RSS
+      </a>
+      <a
+        href="https://www.linkedin.com/in/taylor-osbourne/"
+        target="_blank"
+        rel="noopener noreferrer"
+        alt="rss"
+        style={{
+          textDecoration: `none`,
+          borderBottom: `3px #dc322f dashed`,
+          color: `#b58900`,
+        }}
+      >
+        Linkedin
       </a>
     </div>
     <p>&#169; Taylor Osbourne 2019</p>

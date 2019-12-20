@@ -15,9 +15,9 @@ const StyledNav = styled.nav`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: rgb(74, 157, 248);
+  color: #2aa198;
   font-family: sans-serif;
-  font-weight: 700;
+  font-weight: 200;
   position: relative;
   :hover {
     span:not(.fire) {
@@ -35,6 +35,7 @@ const LeftBracket = styled.span`
   transition: all 0.2s ease-in-out;
   color: #f7df1e;
   font-size: 1.5rem;
+  font-weight: 700;
 `;
 
 const RightBracket = styled.span`
@@ -45,6 +46,7 @@ const RightBracket = styled.span`
   transition: all 0.2s ease-in-out;
   color: #f7df1e;
   font-size: 1.5rem;
+  font-weight: 700;
 `;
 
 const leftBracket = `{`;

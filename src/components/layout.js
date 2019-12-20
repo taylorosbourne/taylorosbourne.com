@@ -12,9 +12,11 @@ const Layout = ({ children }) => (
     <main
       style={{
         margin: `0 auto`,
-        maxWidth: 800,
-        padding: `0px 1.0875rem 1.45rem`,
+        maxWidth: 840,
+        padding: `0px 2.0875rem 1.45rem`,
         paddingTop: 0,
+        borderRadius: `5px`,
+        // backgroundImage: `linear-gradient(to bottom, #073642, #05333f, #03303c, #012e39, #002b36)`
       }}
     >
       {children}

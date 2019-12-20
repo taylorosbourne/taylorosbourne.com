@@ -6,6 +6,7 @@ const InfoContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  font-weight: 200;
   @media (max-width: 700px) {
     flex-direction: column;
   }
@@ -32,7 +33,7 @@ const InfoList = styled.ul`
 const GeneralInfo = () => (
   <InfoContainer>
     <Spiel>
-      <h1 style={{ marginTop: 0 }}>Hi, I'm Taylor</h1>
+      <h1 style={{ marginTop: 0, fontWeight: `200`, color: `#b58900` }}>Hi, I'm Taylor</h1>
       <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>
         I'm a full-stack JavaScript Dev with a soft-spot for Ruby. I like to
         write about being a developer today.

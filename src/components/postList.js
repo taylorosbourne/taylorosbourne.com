@@ -36,8 +36,7 @@ const PostList = ({ posts }) => (
             }}
           />
         </div>
-        <h5 className="tag">
-          Tags:{' '}
+        <h5 className="tag" style={{fontWeight: `300`}}>
           <Tag to={`/${post.node.frontmatter.tag}`}>
             {post.node.frontmatter.tag}
           </Tag>

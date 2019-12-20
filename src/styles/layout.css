@@ -2,6 +2,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-weight: 100;
 }
 body {
   margin: 0;
@@ -199,7 +200,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  background-color: rgb(248, 248, 246);
+  background-color: #fdf6e3;
   color: rgb(18, 27, 39);
   font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;
   font-weight: normal;
@@ -618,21 +619,24 @@ h1, h2, h3, h4, h5, h6, p, li {
   font-size: 1.2em;
   background: none;
   border: none;
-  color: rgb(74, 157, 248);
+  color: #2aa198;
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
 .dark-mode-toggle > button.sun {
-  color: tomato;
+  color: #cb4b16;
 }
+
 .dark-mode .dark-mode-toggle > button {
   color: #999;
 }
+
 .dark-mode-toggle > button:last-child {
   color: #666;
 }
 .dark-mode .dark-mode-toggle > button:last-child {
-  color: rgb(74, 157, 248);
+  color: #2aa198;
 }
 
 .dark-mode-toggle > button:focus {
@@ -682,17 +686,20 @@ label {
 }
 
 body.dark-mode {
-  background: rgb(18, 27, 39);
+  /* background-image: linear-gradient(to bottom, #073642, #05333f, #03303c, #012e39, #002b36); */
+  background: rgb(42,42,42);
+  background: #073642;
   color: rgb(212, 212, 212);
 }
 
 .dark-mode .tag a {
-  background: rgb(12, 30, 45);
+  background: transparent;
   color: rgb(212, 212, 212);
+  border: 1px solid #2aa198;
 }
 
 .dark-mode .tag a:hover {
-  background: rgb(74, 157, 248);
+  background: #2aa198;
   color: rgb(242, 242, 242);
 }
 
@@ -701,16 +708,17 @@ body.dark-mode {
 }
 
 .dark-mode .post-body a {
-  color: rgb(74, 157, 248);
+  color: #d33682;
+  font-weight: 300;
 }
 
 .dark-mode .article-title a {
-  color: rgb(74, 157, 248);
+  color: #b58900;
 }
 
-.dark-mode a {
-  color: rgb(74, 157, 248);
-}
+/* .dark-mode a {
+  color: #2aa198;
+} */
 
 
 @media only screen and (max-width: 480px) {
