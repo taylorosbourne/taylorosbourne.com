@@ -24,16 +24,16 @@ const StyledLink = styled(Link)`
   :hover {
     transform: rotate(-5deg);
     font-size: 2rem;
-    animation: 0.5s infinite linear wiggle;
+    animation: 0.4s infinite linear wiggle;
     span:not(.fire) {
       opacity: 1;
       margin: 0px 5px;
     }
   }
   @keyframes wiggle {
-    0% {transform: rotate(-3deg)}
+    0% {transform: rotate(-2deg)}
     50% {transform: rotate(-7deg)}
-    100% {transform: rotate(-3deg)}
+    100% {transform: rotate(-2deg)}
   }
 `;
 
