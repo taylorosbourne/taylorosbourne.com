@@ -14,6 +14,13 @@ const StyledFooter = styled.footer`
   }
 `;
 
+const FooterLink = styled.a`
+  color: #b58900;
+  margin-right: 15px;
+  text-decoration: none;
+  border-bottom: 3px #dc322f dashed;
+`;
+
 const Footer = () => (
   <StyledFooter>
     <div
@@ -25,47 +32,30 @@ const Footer = () => (
         marginBottom: `25px`,
       }}
     >
-      <a
+      <FooterLink
         href="https://github.com/taylorosbourne"
         target="_blank"
         rel="noopener noreferrer"
         alt="github"
-        style={{ 
-          color: `#b58900`, 
-          marginRight: `15px`,
-          textDecoration: `none`,
-          borderBottom: `3px #dc322f dashed`,
-        }}
       >
         Github
-      </a>
-      <a
+      </FooterLink>
+      <FooterLink
         href="https://taylorosbourne.com/rss.xml"
         target="_blank"
         rel="noopener noreferrer"
         alt="rss"
-        style={{
-          marginRight: `15px`,
-          textDecoration: `none`,
-          borderBottom: `3px #dc322f dashed`,
-          color: `#b58900`,
-        }}
       >
         RSS
-      </a>
-      <a
+      </FooterLink>
+      <FooterLink
         href="https://www.linkedin.com/in/taylor-osbourne/"
         target="_blank"
         rel="noopener noreferrer"
         alt="rss"
-        style={{
-          textDecoration: `none`,
-          borderBottom: `3px #dc322f dashed`,
-          color: `#b58900`,
-        }}
       >
         Linkedin
-      </a>
+      </FooterLink>
     </div>
     <p>&#169; Taylor Osbourne 2019</p>
   </StyledFooter>

@@ -12,7 +12,7 @@ const SkipNavCon = styled.div`
 const SkipNavButton = styled.a`
   padding: 10px 20px;
   border-radius: 5px;
-  background: #173449;
+  background-image: linear-gradient(to right, #2aa198, #009cb7, #0092d2, #4b81da, #9b65c6, #c152aa, #d74386, #df405f, #de5146, #d6642e, #c87816, #b58900);
   color: rgb(242, 242, 242);
   font-weight: bold;
   font-family: Arial;

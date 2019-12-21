@@ -37,21 +37,21 @@ const InfoList = styled.ul`
   }
 `;
 
+const SectionHeader = styled.h2`
+  margin-top: 0;
+  font-weight: 200;
+  color: #b58900;
+  border-bottom: 3px #dc322f dashed;
+  width: 205px;
+  padding-bottom: 5px;
+`;
+
 const GeneralInfo = ({ resume }) => (
   <InfoContainer>
     <Spiel>
-      <h2
-        style={{
-          marginTop: 0,
-          fontWeight: `200`,
-          color: `#b58900`,
-          borderBottom: `3px #dc322f dashed`,
-          width: `205px`,
-          paddingBottom: `5px`,
-        }}
-      >
+      <SectionHeader>
         Hi, I'm Taylor
-      </h2>
+      </SectionHeader>
       <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>
         I'm a full-stack JavaScript Dev with a soft-spot for Ruby. I like to
         write about being a developer today.
@@ -86,19 +86,9 @@ const GeneralInfo = ({ resume }) => (
     </Spiel>
     <InfoList>
       <li>
-        <h2
-          style={{
-            marginTop: 0,
-            fontWeight: `200`,
-            color: `#b58900`,
-            borderBottom: `3px #dc322f dashed`,
-            width: `205px`,
-            paddingBottom: `5px`,
-            marginBottom: `25px`,
-          }}
-        >
+        <SectionHeader style={{ marginBottom: `25px` }}>
           in a nut-shell...
-        </h2>
+        </SectionHeader>
       </li>
       <li>
         <span role="img" aria-label="age-and-pronouns">
