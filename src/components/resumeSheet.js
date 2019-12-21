@@ -8,7 +8,7 @@ const Sheet = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media(max-width: 1000px) {
+  @media (max-width: 1000px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
@@ -21,7 +21,7 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @media(max-width: 1000px) {
+  @media (max-width: 1000px) {
     width: 100%;
   }
   div {
@@ -73,13 +73,13 @@ const ResumeSheet = () => (
       <div>
         <h2>Projects</h2>
         <ul>
-        <li>
+          {/* <li>
             <span
               style={{
                 color: ``,
               }}
             >
-              jsHistorian
+              js-historian
             </span>
             <span
               style={{
@@ -96,7 +96,10 @@ const ResumeSheet = () => (
                   borderBottom: `3px #dc322f dashed`,
                 }}
               >
-                Github &#10024;
+                Github{' '}
+                <span role="img" aria-label="stars">
+                  &#10024;
+                </span>
               </span>
               <span
                 style={{
@@ -105,11 +108,14 @@ const ResumeSheet = () => (
                   borderBottom: `3px #dc322f dashed`,
                 }}
               >
-                Site &#127881;
+                Site
+                <span role="img" aria-label="celebrate">
+                  &#127881;
+                </span>
               </span>
             </span>
-          </li>
-          <li>
+          </li> */}
+          {/* <li>
             <span
               style={{
                 color: ``,
@@ -132,7 +138,10 @@ const ResumeSheet = () => (
                   borderBottom: `3px #dc322f dashed`,
                 }}
               >
-                Github &#10024;
+                Github{' '}
+                <span role="img" aria-label="stars">
+                  &#10024;
+                </span>
               </span>
               <span
                 style={{
@@ -141,10 +150,13 @@ const ResumeSheet = () => (
                   borderBottom: `3px #dc322f dashed`,
                 }}
               >
-                Site &#127881;
+                Site{' '}
+                <span role="img" aria-label="celebrate">
+                  &#127881;
+                </span>
               </span>
             </span>
-          </li>
+          </li> */}
           <li>
             <span
               style={{
@@ -161,24 +173,48 @@ const ResumeSheet = () => (
                 width: `50%`,
               }}
             >
-              <span
+              <a 
                 style={{
-                  color: `#b58900`,
-                  paddingBottom: `5px`,
-                  borderBottom: `3px #dc322f dashed`,
+                  textDecoration: `none`
                 }}
+                href="https://github.com/taylorosbourne/dad-joke-cli"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Github &#10024;
-              </span>
-              <span
+                <span
+                  style={{
+                    color: `#b58900`,
+                    paddingBottom: `5px`,
+                    borderBottom: `3px #dc322f dashed`,
+                  }}
+                >
+                  Github{' '}
+                  <span role="img" aria-label="stars">
+                    &#10024;
+                  </span>
+                </span>
+              </a>
+              <a 
                 style={{
-                  color: `#b58900`,
-                  paddingBottom: `5px`,
-                  borderBottom: `3px #dc322f dashed`,
+                  textDecoration: `none`
                 }}
+                href="https://www.npmjs.com/package/dad-joke-cli"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                NPM &#9889;
-              </span>
+                <span
+                  style={{
+                    color: `#b58900`,
+                    paddingBottom: `5px`,
+                    borderBottom: `3px #dc322f dashed`,
+                  }}
+                >
+                  NPM{' '}
+                  <span role="img" aria-label="stars">
+                    &#9889;
+                  </span>
+                </span>
+              </a>
             </span>
           </li>
           <li>
@@ -186,7 +222,7 @@ const ResumeSheet = () => (
               style={{
                 color: ``,
               }}
-            >
+              >
               node-clean-up
             </span>
             <span
@@ -196,25 +232,49 @@ const ResumeSheet = () => (
                 alignItems: `center`,
                 width: `50%`,
               }}
-            >
-              <span
-                style={{
-                  color: `#b58900`,
-                  paddingBottom: `5px`,
-                  borderBottom: `3px #dc322f dashed`,
-                }}
               >
-                Github &#10024;
-              </span>
-              <span
+              <a 
                 style={{
-                  color: `#b58900`,
-                  paddingBottom: `5px`,
-                  borderBottom: `3px #dc322f dashed`,
+                  textDecoration: `none`
                 }}
+                href="https://github.com/taylorosbourne/nodejs-cleanup"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                NPM &#9889;
-              </span>
+                <span
+                  style={{
+                    color: `#b58900`,
+                    paddingBottom: `5px`,
+                    borderBottom: `3px #dc322f dashed`,
+                  }}
+                >
+                  Github{' '}
+                  <span role="img" aria-label="stars">
+                    &#10024;
+                  </span>
+                </span>
+              </a>
+              <a 
+                style={{
+                  textDecoration: `none`
+                }}
+                href="https://www.npmjs.com/package/nodejs-cleanup"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  style={{
+                    color: `#b58900`,
+                    paddingBottom: `5px`,
+                    borderBottom: `3px #dc322f dashed`,
+                  }}
+                >
+                  NPM{' '}
+                  <span role="img" aria-label="stars">
+                    &#9889;
+                  </span>
+                </span>
+              </a>
             </span>
           </li>
           <li>
@@ -233,24 +293,48 @@ const ResumeSheet = () => (
                 width: `50%`,
               }}
             >
-              <span
+              <a 
+                style={{
+                  textDecoration: `none`
+                }}
+                href="https://github.com/taylorosbourne/yante"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
+                  style={{
+                    color: `#b58900`,
+                    paddingBottom: `5px`,
+                    borderBottom: `3px #dc322f dashed`,
+                  }}
+                >
+                  Github{' '}
+                  <span role="img" aria-label="stars">
+                    &#10024;
+                  </span>
+                </span>
+              </a>
+              <a 
+                style={{
+                  textDecoration: `none`
+                }}
+                href="https://chrome.google.com/webstore/detail/yante/cdadmhaleiandaodcgnlaebdijngpmhn/reviews"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span
                 style={{
                   color: `#b58900`,
                   paddingBottom: `5px`,
                   borderBottom: `3px #dc322f dashed`,
                 }}
               >
-                Github &#10024;
+                Chrome{' '}
+                <span role="img" aria-label="rainbow">
+                  &#127752;
+                </span> 
               </span>
-              <span
-                style={{
-                  color: `#b58900`,
-                  paddingBottom: `5px`,
-                  borderBottom: `3px #dc322f dashed`,
-                }}
-              >
-                Chrome &#127752;
-              </span>
+              </a>
             </span>
           </li>
         </ul>
@@ -323,7 +407,8 @@ const ResumeSheet = () => (
           <dt>FREELANCE FULL-STACK DEVELOPER</dt>
           <span>AUG 2018 - </span>
           <dd>
-            As a freelance developer, I have built production-level applications and websites utilizing advanced, modern JavaScript technologies.
+            As a freelance developer, I have built production-level applications
+            and websites utilizing advanced, modern JavaScript technologies.
           </dd>
         </dl>
       </div>

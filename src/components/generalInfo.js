@@ -10,6 +10,9 @@ const InfoContainer = styled.div`
   font-weight: 200;
   @media (max-width: 700px) {
     flex-direction: column;
+    * {
+      margin-bottom: 25px;
+    }
   }
 `;
 
