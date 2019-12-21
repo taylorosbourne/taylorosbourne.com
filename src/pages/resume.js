@@ -11,7 +11,7 @@ const ResumePage = () => {
     <Layout>
       <SEO title={`${title} - Resume`} />
       <br />
-      <GeneralInfo />
+      <GeneralInfo resume={true} />
       <ResumeSheet />
     </Layout>
   );
