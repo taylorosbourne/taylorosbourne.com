@@ -1,15 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const ListItem = styled.li`
+  @media(max-width: 800px) {
+    font-size: 0.85rem;
+  }
+`;
 
 const Projects = () => (
   <div>
     <h2>Projects</h2>
     <ul>
-      <li>
-        <span
-          style={{
-            color: ``,
-          }}
-        >
+      <ListItem>
+        <span>
           dad-joke CLI
         </span>
         <span
@@ -63,8 +66,8 @@ const Projects = () => (
             </span>
           </a>
         </span>
-      </li>
-      <li>
+      </ListItem>
+      <ListItem>
         <span
           style={{
             color: ``,
@@ -123,8 +126,8 @@ const Projects = () => (
             </span>
           </a>
         </span>
-      </li>
-      <li>
+      </ListItem>
+      <ListItem>
         <span
           style={{
             color: ``,
@@ -183,7 +186,67 @@ const Projects = () => (
             </span>
           </a>
         </span>
-      </li>
+      </ListItem>
+      <ListItem>
+        <span
+          style={{
+            color: ``,
+          }}
+        >
+          steelandsilverpod.fm
+        </span>
+        <span
+          style={{
+            display: `flex`,
+            justifyContent: `space-between`,
+            alignItems: `center`,
+            width: `50%`,
+          }}
+        >
+          <a
+            style={{
+              textDecoration: `none`,
+            }}
+            href="https://github.com/taylorosbourne/nodejs-cleanup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span
+              style={{
+                color: `#b58900`,
+                paddingBottom: `5px`,
+                borderBottom: `3px #dc322f dashed`,
+              }}
+            >
+              Github{' '}
+              <span role="img" aria-label="stars">
+                &#10024;
+              </span>
+            </span>
+          </a>
+          <a
+            style={{
+              textDecoration: `none`,
+            }}
+            href="https://www.npmjs.com/package/nodejs-cleanup"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span
+              style={{
+                color: `#b58900`,
+                paddingBottom: `5px`,
+                borderBottom: `3px #dc322f dashed`,
+              }}
+            >
+              Site{' '}
+              <span role="img" aria-label="stars">
+                &#127881;
+              </span>
+            </span>
+          </a>
+        </span>
+      </ListItem>
     </ul>
   </div>
 );
