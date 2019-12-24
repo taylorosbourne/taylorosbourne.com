@@ -193,7 +193,7 @@ const Projects = () => (
             color: ``,
           }}
         >
-          steelandsilverpod.fm
+          steelandsilverpod
         </span>
         <span
           style={{
@@ -207,7 +207,7 @@ const Projects = () => (
             style={{
               textDecoration: `none`,
             }}
-            href="https://github.com/taylorosbourne/nodejs-cleanup"
+            href="https://github.com/taylorosbourne/steelandsilverpod.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -228,7 +228,7 @@ const Projects = () => (
             style={{
               textDecoration: `none`,
             }}
-            href="https://www.npmjs.com/package/nodejs-cleanup"
+            href="https://www.steelandsilverpod.com/"
             target="_blank"
             rel="noopener noreferrer"
           >
