@@ -11,6 +11,9 @@ const StyledFooter = styled.footer`
   font-weight: 200;
   @media (max-width: 800px) {
     max-width: 90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -25,7 +28,6 @@ const Footer = () => (
   <StyledFooter>
     <div
       style={{
-        width: `70px`,
         display: `flex`,
         justifyContent: `space-between`,
         alignItems: `center`,
