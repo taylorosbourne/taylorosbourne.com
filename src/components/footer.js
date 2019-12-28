@@ -57,7 +57,7 @@ const Footer = () => (
         Linkedin
       </FooterLink>
     </div>
-    <p>&#169; Taylor Osbourne 2019</p>
+    <p>Made with ❤️ by Taylor Osbourne</p>
   </StyledFooter>
 );
 
