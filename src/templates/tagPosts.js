@@ -1,6 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/layout';
+import GeneralInfo from '../components/generalInfo';
 import PostList from '../components/postList';
 
 const TagPostsTemplate = ({ data }) => {
@@ -9,6 +10,7 @@ const TagPostsTemplate = ({ data }) => {
     <Layout>
       <br />
       <br />
+      <GeneralInfo />
       <PostList posts={posts} />
     </Layout>
   );

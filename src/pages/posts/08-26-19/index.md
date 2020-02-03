@@ -89,7 +89,7 @@ Create-react-component was working and I liked it alot. It looked something like
 
 Which would generate this:
 
-```
+```bash
     🔎  --Looking for src directory...
     🔎  --You don't have a src directory! Let me make one
 

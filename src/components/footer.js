@@ -3,11 +3,11 @@ import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   max-width: 760px;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 45px;
   font-weight: 200;
   @media (max-width: 800px) {
     max-width: 90%;
@@ -57,7 +57,6 @@ const Footer = () => (
         Linkedin
       </FooterLink>
     </div>
-    <p>&#169; Taylor Osbourne 2019</p>
   </StyledFooter>
 );
 

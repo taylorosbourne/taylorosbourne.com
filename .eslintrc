@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "parser": "babel-eslint",
+    "jsx-a11y/label-has-for": [
+      0,
+      {
+        "components": [
+          "Label"
+        ],
+        "required": {
+          "every": [
+            "nesting",
+            "id"
+          ]
+        },
+        "allowChildren": false
+      }
+    ]
+  }
+}

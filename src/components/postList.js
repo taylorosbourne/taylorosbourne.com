@@ -1,8 +1,6 @@
 import React from 'react';
 import howLong from '../utils/calculateReadTime';
-import previewPost from '../utils/previewPost';
 import { StyledGatsbyLink, Tag } from '../styles/Link';
-import { PostBody } from '../styles/Post';
 
 const PostList = ({ posts }) => (
   <>
@@ -21,9 +19,9 @@ const PostList = ({ posts }) => (
           }}
           id={i === 0 ? 'main' : null}
         >
-          <h2 className="article-title">
+          <h3 className="article-title">
             <StyledGatsbyLink to={path}>{title}</StyledGatsbyLink>
-          </h2>
+          </h3>
           <small>
             <span style={{ color: `#6c71c4` }}>{date}</span> Time to{' '}
             <span role="img" aria-label="read">
@@ -31,18 +29,7 @@ const PostList = ({ posts }) => (
             </span>
             : {howLong(html)} minutes
           </small>
-          <div>
-            <br />
-            <PostBody
-              className="post-body"
-              dangerouslySetInnerHTML={{
-                __html: previewPost(html),
-              }}
-            />
-          </div>
-          <h5 className="tag" style={{ fontWeight: `300` }}>
-            <Tag to={`/${tag}`}>{tag}</Tag>
-          </h5>
+            <Tag to={`/${tag}`}># {tag}</Tag>
           <br />
         </div>
       );
