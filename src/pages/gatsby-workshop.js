@@ -21,7 +21,7 @@ const SlideDeck = styled.div`
 
 const StyledSlide = styled.div`
   height: 100%; 
-  width: 80%;
+  width: 100%;
   display: flex; 
   justify-content: center; 
   align-items: center;
@@ -38,7 +38,7 @@ const GatsbyWorkshop = () => {
 
   return (
     <SlideDeck>
-      <Slider {...settings} style={{ height: `70vh`, width: `80vw` }} arrows={true}>
+      <Slider {...settings} style={{ height: `80vh`, width: `80vw`, display: `flex`, justifyContent: `center`, alignItems: `center` }} arrows={true}>
         {[<SlideOne />, <SlideTwo />].map((slide, i) => {
           return <StyledSlide>{slide}</StyledSlide>;
         })}

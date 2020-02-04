@@ -30,7 +30,7 @@ const Emphasized = styled.span`
 `;
 
 const SlideTwo = () => (
-  <div style={{display: `flex`, justifyContent: `center`, alignItems: `center`}}>
+  <div style={{display: `flex`, justifyContent: `center`, alignItems: `center`, height: `100%`, width: `100%`}}>
   <InfoList>
     <li style={{listStyle: `none`}}>
       <SectionHeader style={{ marginBottom: `25px` }}>
