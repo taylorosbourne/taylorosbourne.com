@@ -4,12 +4,6 @@ import styled from 'styled-components';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SlideOne from '../components/slides/gatsby-workshop/slideOne';
-import SlideTwo from '../components/slides/gatsby-workshop/slideTwo';
-import SlideThree from '../components/slides/gatsby-workshop/slideThree';
-import SlideFour from '../components/slides/gatsby-workshop/slideFour';
-import SlideFive from '../components/slides/gatsby-workshop/slideFive';
-import SlideSix from '../components/slides/gatsby-workshop/slideSix';
 
 const SlideDeck = styled.div`
   width: 100vw;
@@ -54,9 +48,8 @@ const StyledSlide = styled.div`
   }
 `;
 
-const GatsbyWorkshop = ({data}) => {
+const GatsbyWorkshop = ({ data }) => {
   const slides = data.allMarkdownRemark.edges;
-  console.log(slides);
   const settings = {
     dots: true,
     infinite: true,
@@ -67,21 +60,19 @@ const GatsbyWorkshop = ({data}) => {
 
   return (
     <SlideDeck>
-      <Slider 
-        {...settings} 
+      <Slider
+        {...settings}
         arrows={true}
-        style={{ 
-          height: `80vh`, 
-          width: `80vw`, 
-          display: `flex`, 
-          justifyContent: `center`, 
-          alignItems: `center` 
-        }} 
+        style={{
+          height: `80vh`,
+          width: `80vw`,
+          display: `flex`,
+          justifyContent: `center`,
+          alignItems: `center`
+        }}
       >
-
         {slides.map((slide, i) => {
           const { frontmatter, id, html: __html } = slide.node;
-
           return (
             <div key={i} style={{
               width: `80%`,
@@ -90,25 +81,13 @@ const GatsbyWorkshop = ({data}) => {
               justifyContent: `center`,
               alignItems: `center`
             }}>
-              <StyledSlide 
+              <StyledSlide
                 key={id}
                 dangerouslySetInnerHTML={{ __html }}
               />
             </div>
           )
         })}
-
-        {/* {[
-          <SlideOne />, 
-          <SlideTwo />, 
-          <SlideThree />, 
-          <SlideFour />,
-          <SlideFive />,
-          <SlideSix />
-        ].map((slide, i) => {
-          return <StyledSlide>{slide}</StyledSlide>;
-        })} */}
-        
       </Slider>
     </SlideDeck>
   );
