@@ -9,7 +9,7 @@ const InfoList = styled.ul`
       margin-left: -28px;
     }
     a {
-      margin-left: -25px;
+      color: #d33682;
     }
   }
 `;
@@ -29,7 +29,7 @@ const Emphasized = styled.span`
   color: #2aa198;
 `;
 
-const SlideTwo = () => (
+const SlideFour = () => (
   <div
     style={{
       display: `flex`,
@@ -42,30 +42,24 @@ const SlideTwo = () => (
     <InfoList>
       <li style={{ listStyle: `none` }}>
         <SectionHeader style={{ marginBottom: `25px` }}>
-          Workshop Roadmap
+          Why Gatsby
         </SectionHeader>
       </li>
       <li>
-        <Emphasized>The What</Emphasized> and <Emphasized>The Why</Emphasized>{' '}
-        of Gatsby?
+        <Emphasized>SEO</Emphasized>
       </li>
       <li>
-        <Emphasized>React</Emphasized> & <Emphasized>GraphQL</Emphasized> in
-        Gatsby.
+        <Emphasized>Free</Emphasized> and <Emphasized>Open Source</Emphasized>
       </li>
       <li>
-        <Emphasized>Templates</Emphasized>, <Emphasized>Layouts</Emphasized>, &{' '}
-        <Emphasized>Styles</Emphasized> oh my!
+        <Emphasized>Fully-Featured</Emphasized>
       </li>
       <li>
-        <Emphasized>Building</Emphasized> our app for{' '}
-        <Emphasized>Production</Emphasized>.
+        Enormous Community <Emphasized>Support</Emphasized>
       </li>
-      <li>
-        <Emphasized>Deploying</Emphasized> to <Emphasized>Netlify</Emphasized>.
-      </li>
+      <li>Easily Deployable through <Emphasized>Netlify</Emphasized></li>
     </InfoList>
   </div>
 );
 
-export default SlideTwo;
+export default SlideFour;

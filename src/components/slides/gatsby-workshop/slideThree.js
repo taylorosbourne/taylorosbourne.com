@@ -9,7 +9,7 @@ const InfoList = styled.ul`
       margin-left: -28px;
     }
     a {
-      margin-left: -25px;
+      color: #d33682;
     }
   }
 `;
@@ -29,7 +29,7 @@ const Emphasized = styled.span`
   color: #2aa198;
 `;
 
-const SlideTwo = () => (
+const SlideThree = () => (
   <div
     style={{
       display: `flex`,
@@ -42,30 +42,25 @@ const SlideTwo = () => (
     <InfoList>
       <li style={{ listStyle: `none` }}>
         <SectionHeader style={{ marginBottom: `25px` }}>
-          Workshop Roadmap
+          What is Gatsby
         </SectionHeader>
       </li>
       <li>
-        <Emphasized>The What</Emphasized> and <Emphasized>The Why</Emphasized>{' '}
-        of Gatsby?
+        <Emphasized>Gatsby</Emphasized> is a modern site generator
       </li>
       <li>
-        <Emphasized>React</Emphasized> & <Emphasized>GraphQL</Emphasized> in
-        Gatsby.
+        <Emphasized>Free</Emphasized> and <Emphasized>Open Source</Emphasized>
       </li>
       <li>
-        <Emphasized>Templates</Emphasized>, <Emphasized>Layouts</Emphasized>, &{' '}
-        <Emphasized>Styles</Emphasized> oh my!
+        Based on <Emphasized>React</Emphasized>
       </li>
       <li>
-        <Emphasized>Building</Emphasized> our app for{' '}
-        <Emphasized>Production</Emphasized>.
+        Leverages <Emphasized>GraphQL</Emphasized>
       </li>
-      <li>
-        <Emphasized>Deploying</Emphasized> to <Emphasized>Netlify</Emphasized>.
-      </li>
+      <li></li>
+      <li>Learn more <a href="https://www.gatsbyjs.org/">here</a></li>
     </InfoList>
   </div>
 );
 
-export default SlideTwo;
+export default SlideThree;

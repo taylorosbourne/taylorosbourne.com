@@ -5,6 +5,8 @@ import SlideOne from '../components/slides/gatsby-workshop/slideOne';
 import SlideTwo from '../components/slides/gatsby-workshop/slideTwo';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SlideThree from '../components/slides/gatsby-workshop/slideThree';
+import SlideFour from '../components/slides/gatsby-workshop/slideFour';
 
 const SlideDeck = styled.div`
   width: 100vw;
@@ -39,7 +41,7 @@ const GatsbyWorkshop = () => {
   return (
     <SlideDeck>
       <Slider {...settings} style={{ height: `80vh`, width: `80vw`, display: `flex`, justifyContent: `center`, alignItems: `center` }} arrows={true}>
-        {[<SlideOne />, <SlideTwo />].map((slide, i) => {
+        {[<SlideOne />, <SlideTwo />, <SlideThree />, <SlideFour />].map((slide, i) => {
           return <StyledSlide>{slide}</StyledSlide>;
         })}
       </Slider>
