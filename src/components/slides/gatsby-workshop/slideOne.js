@@ -25,6 +25,7 @@ const SectionHeader = styled.h2`
 `;
 
 const SlideOne = () => (
+  <div style={{display: `flex`, justifyContent: `center`, alignItems: `center`}}>
   <InfoList style={{ maxWidth: `500px` }}>
     <li>
       <SectionHeader style={{ marginBottom: `25px` }}>
@@ -62,6 +63,7 @@ const SlideOne = () => (
       Gamer
     </li>
   </InfoList>
+  </div>
 );
 
 export default SlideOne;

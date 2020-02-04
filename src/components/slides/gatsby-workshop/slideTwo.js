@@ -30,6 +30,7 @@ const Emphasized = styled.span`
 `;
 
 const SlideTwo = () => (
+  <div style={{display: `flex`, justifyContent: `center`, alignItems: `center`}}>
   <InfoList>
     <li style={{listStyle: `none`}}>
       <SectionHeader style={{ marginBottom: `25px` }}>
@@ -52,6 +53,7 @@ const SlideTwo = () => (
       
     </li>
   </InfoList>
+  </div>
 );
 
 export default SlideTwo;
