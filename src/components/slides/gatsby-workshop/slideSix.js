@@ -29,7 +29,7 @@ const Emphasized = styled.span`
   color: #2aa198;
 `;
 
-const SlideThree = () => (
+const SlideSix = () => (
   <div
     style={{
       display: `flex`,
@@ -42,24 +42,23 @@ const SlideThree = () => (
     <InfoList>
       <li style={{ listStyle: `none` }}>
         <SectionHeader style={{ marginBottom: `25px` }}>
-          What is Gatsby
+          GraphQL in Gatsby
         </SectionHeader>
       </li>
       <li>
-        <Emphasized>Gatsby</Emphasized> is a modern site generator
+        <Emphasized>Gatsby</Emphasized> is<Emphasized>'no-schema-neccessary'</Emphasized>
       </li>
       <li>
-        <Emphasized>Free</Emphasized> and <Emphasized>Open Source</Emphasized>
+        <Emphasized>Gatsby</Emphasized> creates schemas <Emphasized>dynamically</Emphasized> by analyzing data
       </li>
       <li>
-        Based on <Emphasized>React</Emphasized>
+        In browser <Emphasized>GraphQL</Emphasized> server explorer
       </li>
       <li>
-        Leverages <Emphasized>GraphQL</Emphasized>
+        Pivotal in getting to <Emphasized>1.0</Emphasized>
       </li>
-      <li>Learn more <a href="https://www.gatsbyjs.org/">here</a></li>
     </InfoList>
   </div>
-);
+);;
 
-export default SlideThree;
+export default SlideSix;

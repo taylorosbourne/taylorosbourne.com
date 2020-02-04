@@ -29,7 +29,7 @@ const Emphasized = styled.span`
   color: #2aa198;
 `;
 
-const SlideThree = () => (
+const SlideFive = () => (
   <div
     style={{
       display: `flex`,
@@ -42,24 +42,23 @@ const SlideThree = () => (
     <InfoList>
       <li style={{ listStyle: `none` }}>
         <SectionHeader style={{ marginBottom: `25px` }}>
-          What is Gatsby
+          React in Gatsby
         </SectionHeader>
       </li>
       <li>
-        <Emphasized>Gatsby</Emphasized> is a modern site generator
+        <Emphasized>Gatsby</Emphasized> has used <Emphasized>React</Emphasized> since day one
       </li>
       <li>
-        <Emphasized>Free</Emphasized> and <Emphasized>Open Source</Emphasized>
+        Comes packed with <Emphasized>React Router</Emphasized>
       </li>
       <li>
-        Based on <Emphasized>React</Emphasized>
+        Dev server with <Emphasized>hot reloading</Emphasized> (similar to <Emphasized>CRA</Emphasized>)
       </li>
       <li>
-        Leverages <Emphasized>GraphQL</Emphasized>
+        <Emphasized>React's</Emphasized> Documentation is built with <Emphasized>Gatsby</Emphasized>
       </li>
-      <li>Learn more <a href="https://www.gatsbyjs.org/">here</a></li>
     </InfoList>
   </div>
-);
+);;
 
-export default SlideThree;
+export default SlideFive;
