@@ -1,10 +1,11 @@
 import React from 'react';
-import Slider from "react-slick";
+import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import SlideOne from '../components/slides/gatsby-workshop/slideOne';
-import SlideTwo from '../components/slides/gatsby-workshop/slideTwo';
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import SlideOne from '../components/slides/gatsby-workshop/slideOne';
+import SlideTwo from '../components/slides/gatsby-workshop/slideTwo';
 import SlideThree from '../components/slides/gatsby-workshop/slideThree';
 import SlideFour from '../components/slides/gatsby-workshop/slideFour';
 import SlideFive from '../components/slides/gatsby-workshop/slideFive';
@@ -24,14 +25,38 @@ const SlideDeck = styled.div`
 `;
 
 const StyledSlide = styled.div`
-  height: 100%; 
-  width: 100%;
-  display: flex; 
-  justify-content: center; 
-  align-items: center;
+  height: 500px; 
+  width: 800px;
+  padding: 22px;
+  margin-left: 50px;
+  h2 {
+    margin-top: 0;
+    font-weight: 200;
+    color: #b58900;
+    border-bottom: 3px #dc322f dashed;
+    padding-bottom: 5px;
+    font-size: 4rem;
+  }
+  li {
+    line-height: 1;
+    font-size: 2rem;
+    @media (max-width: 700px) {
+      margin-left: -28px;
+    }
+    a {
+      color: #d33682;
+    }
+    span.emphasized {
+      font-style: italic;
+      border-bottom: 3px #dc322f dashed;
+      color: #2aa198;
+    }
+  }
 `;
 
-const GatsbyWorkshop = () => {
+const GatsbyWorkshop = ({data}) => {
+  const slides = data.allMarkdownRemark.edges;
+  console.log(slides);
   const settings = {
     dots: true,
     infinite: true,
@@ -42,8 +67,38 @@ const GatsbyWorkshop = () => {
 
   return (
     <SlideDeck>
-      <Slider {...settings} style={{ height: `80vh`, width: `80vw`, display: `flex`, justifyContent: `center`, alignItems: `center` }} arrows={true}>
-        {[
+      <Slider 
+        {...settings} 
+        arrows={true}
+        style={{ 
+          height: `80vh`, 
+          width: `80vw`, 
+          display: `flex`, 
+          justifyContent: `center`, 
+          alignItems: `center` 
+        }} 
+      >
+
+        {slides.map((slide, i) => {
+          const { frontmatter, id, html: __html } = slide.node;
+
+          return (
+            <div key={i} style={{
+              width: `80%`,
+              height: `80%`,
+              display: `flex`,
+              justifyContent: `center`,
+              alignItems: `center`
+            }}>
+              <StyledSlide 
+                key={id}
+                dangerouslySetInnerHTML={{ __html }}
+              />
+            </div>
+          )
+        })}
+
+        {/* {[
           <SlideOne />, 
           <SlideTwo />, 
           <SlideThree />, 
@@ -52,10 +107,34 @@ const GatsbyWorkshop = () => {
           <SlideSix />
         ].map((slide, i) => {
           return <StyledSlide>{slide}</StyledSlide>;
-        })}
+        })} */}
+        
       </Slider>
     </SlideDeck>
   );
 }
+
+export const SLIDES_BY_WORKSHOP = graphql`
+  query SLIDES_BY_WORKSHOP {
+    allMarkdownRemark(
+      filter: {frontmatter: {
+        type: {eq: "slide"}, 
+        workshop: {eq: "Gatsby Workshop"}
+      }},
+      sort: {fields: frontmatter___slide, order: ASC}
+    ) {
+      edges {
+        node {
+          html
+          id
+          frontmatter {
+            type
+            workshop
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default GatsbyWorkshop;

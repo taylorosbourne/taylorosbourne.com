@@ -4,6 +4,7 @@ date: '2019-08-27'
 title: 'Boycott Todo App Tutorials'
 author: 'Taylor Osbourne'
 tag: 'web-dev'
+type: 'post'
 ---
 
 You've seen them everywhere. 'Build a Todo App in X' is a popular bit of clickbait to those interested in Web Development. The internet is full of these tutorials, in just about any technology you can imagine. Why is this? Well, the Todo App tutorial is the natural evolution of the Hello World application. While a hello world introduces you (the developer) to the language's, or framework's, basic syntax, and file structure, maybe even a boilerplate-generating cli, the Todo app is the implementation of actual logic.

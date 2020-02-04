@@ -4,6 +4,7 @@ date: '2019-08-25'
 title: "I'm a Developer (I Promise)"
 author: 'Taylor Osbourne'
 tag: 'web-dev'
+type: 'post'
 ---
 
 August 20th marks one year since I set out to become a 'Developer'. While in high school, I was one of many whom dabbled in html and css with the intent to trick out myspace pages for local bands in the Atlanta hardcore scene. I was instantly hooked. The ability to manipulate the look and feel of a website was thrilling to me. But with time, I stopped playing in bands and any 'Developer' work went out the window along with myspace.

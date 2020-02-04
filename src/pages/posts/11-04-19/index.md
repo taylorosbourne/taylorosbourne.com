@@ -4,6 +4,7 @@ date: '2019-11-04'
 title: 'Sorbet is Sweet: Static Type Checking for Ruby'
 author: 'Taylor Osbourne'
 tag: 'ruby'
+type: 'post'
 ---
 
 The [Ruby](https://www.ruby-lang.org/en/) programming language, like JavaScript, is a dynamically typed language. In a dynamic typed language it is not necessary to initialize variables. For many developers, myself included, this is great. Especially when first learning a programming language, it seems to make the code easier to write. Or atleast, requires less meticulous syntax. However, after some time, you'll encounter a plethora of errors that come from a variable not being the correct type that your function is looking for. This is where static typing comes in handy.

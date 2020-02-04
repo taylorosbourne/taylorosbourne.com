@@ -4,6 +4,7 @@ date: '2019-08-28'
 title: 'Having Friends Who Code'
 author: 'Taylor Osbourne'
 tag: 'web-dev'
+type: 'post'
 ---
 
 I'm making my third point about the benefits of [GraphQL](https://graphql.org/) over traditional [RESTful apis](https://restfulapi.net/) when I start to notice my wife's eyes glazing over. She doesn't care, but she loves me so she listens. As a developer, you're also a student. There are seemingly endless topics to learn or improve your understanding of. And if you're anything like me, when you come across something cool you want to talk about it.

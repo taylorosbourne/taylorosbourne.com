@@ -16,22 +16,22 @@ const TagPostsTemplate = ({ data }) => {
   );
 };
 
-export const TAG_QUERY = graphql`
-  query POST_BY_TAG($tag: String!) {
+export const POSTS_BY_TAG = graphql`
+  query POSTS_BY_TAG($tag: String!) {
     allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tag: { in: [$tag] } } }
+      filter: {frontmatter: {tag: {eq: $tag}}}, 
+      sort: {fields: frontmatter___date, order: DESC}
     ) {
       edges {
         node {
           id
           html
           frontmatter {
-            path
-            title
-            date
             author
+            date
+            path
             tag
+            title
           }
         }
       }
