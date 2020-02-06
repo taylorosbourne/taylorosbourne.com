@@ -1,7 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Carousel from '../shim/nuka-carousel';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const SlideDeck = styled.div`
   width: 100vw;
@@ -17,6 +19,9 @@ const SlideDeck = styled.div`
 `;
 
 const StyledSlide = styled.div`
+  padding: 22px;
+  width: 800px;
+  margin: 0 auto;
   h2 {
     margin-top: 0;
     font-weight: 200;
@@ -44,6 +49,7 @@ const StyledSlide = styled.div`
 
 const GatsbyWorkshop = ({ data }) => {
   const slides = data.allMarkdownRemark.edges;
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -54,12 +60,23 @@ const GatsbyWorkshop = ({ data }) => {
 
   return (
     <SlideDeck>
-      <Carousel>
+      <Slider
+        {...settings}
+        arrows={true}
+        style={{
+          height: `80vh`,
+          width: `80vw`,
+          display: `flex`,
+          justifyContent: `center`,
+          alignItems: `center`
+        }}
+      >
         {slides.map((slide, i) => {
           const { frontmatter, id, html: __html } = slide.node;
           return (
             <div key={i} style={{
-              marginTop: `250px`,
+              width: `80%`,
+              height: `80%`,
               display: `flex`,
               justifyContent: `center`,
               alignItems: `center`
@@ -71,7 +88,7 @@ const GatsbyWorkshop = ({ data }) => {
             </div>
           )
         })}
-      </Carousel>
+      </Slider>
     </SlideDeck>
   );
 }
