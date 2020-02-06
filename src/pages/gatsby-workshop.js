@@ -1,9 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Carousel from '../shim/nuka-carousel';
 
 const SlideDeck = styled.div`
   width: 100vw;
@@ -19,10 +17,6 @@ const SlideDeck = styled.div`
 `;
 
 const StyledSlide = styled.div`
-  height: 500px; 
-  width: 800px;
-  padding: 22px;
-  margin-left: 50px;
   h2 {
     margin-top: 0;
     font-weight: 200;
@@ -60,23 +54,12 @@ const GatsbyWorkshop = ({ data }) => {
 
   return (
     <SlideDeck>
-      <Slider
-        {...settings}
-        arrows={true}
-        style={{
-          height: `80vh`,
-          width: `80vw`,
-          display: `flex`,
-          justifyContent: `center`,
-          alignItems: `center`
-        }}
-      >
+      <Carousel>
         {slides.map((slide, i) => {
           const { frontmatter, id, html: __html } = slide.node;
           return (
             <div key={i} style={{
-              width: `80%`,
-              height: `80%`,
+              marginTop: `250px`,
               display: `flex`,
               justifyContent: `center`,
               alignItems: `center`
@@ -88,7 +71,7 @@ const GatsbyWorkshop = ({ data }) => {
             </div>
           )
         })}
-      </Slider>
+      </Carousel>
     </SlideDeck>
   );
 }
