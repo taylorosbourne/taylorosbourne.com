@@ -4,7 +4,7 @@ type: 'slide'
 slide: 9
 ---
 
-## First things First
+## Install the transformer
 
 install the transformer
 
