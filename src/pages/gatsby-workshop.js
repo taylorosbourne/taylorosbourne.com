@@ -22,6 +22,8 @@ const StyledSlide = styled.div`
   padding: 22px;
   width: 800px;
   margin: 0 auto;
+  overflow: scroll;
+  max-height: 500px;
   h2 {
     margin-top: 0;
     font-weight: 200;
