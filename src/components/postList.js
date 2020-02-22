@@ -19,7 +19,7 @@ const PostList = ({ posts }) => (
           }}
           id={i === 0 ? 'main' : null}
         >
-          <h3 className="article-title">
+          <h3 className="article-title" style={{color: `tomato`}}>
             <StyledGatsbyLink to={path}>{title}</StyledGatsbyLink>
           </h3>
           <small>
