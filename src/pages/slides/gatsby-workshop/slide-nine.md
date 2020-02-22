@@ -16,6 +16,13 @@ and add it to your gatsby-config.js
 
 ```javascript
 plugins: [
-  `gatsby-transformer-remark`
+  `gatsby-transformer-remark`,
+  {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
 ]
 ```
