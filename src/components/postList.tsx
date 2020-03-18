@@ -1,8 +1,26 @@
-import React from 'react';
-import howLong from '../utils/calculateReadTime';
+import React, { FC } from 'react';
+
+import howLong from '../utils/howlLong';
 import { StyledGatsbyLink, Tag } from '../styles/Link';
 
-const PostList = ({ posts }) => (
+interface Post {
+  node: {
+    id: string;
+    html: string;
+    frontmatter: {
+      path: string;
+      title: string;
+      date: string;
+      tag: string;
+    }
+  }
+}
+
+interface Props {
+  posts: Post[];
+}
+
+const PostList: FC<Props> = ({ posts }) => (
   <>
     <br />
     {posts.map((post, i) => {

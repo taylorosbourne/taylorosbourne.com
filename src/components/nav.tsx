@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
+
 import DarkModeToggle from './DarkModeToggle';
 import { StyledNav, StyledLink, LeftBracket, RightBracket } from '../styles/Nav';
 
-const leftBracket = `{`;
-const rightBracket = `}`;
+const leftBracket: string = `{`;
+const rightBracket: string = `}`;
 
-const Nav = () => (
+const Nav: FC = () => (
   <StyledNav>
     <StyledLink to="/" className="home-link">
       <LeftBracket>{leftBracket}</LeftBracket>

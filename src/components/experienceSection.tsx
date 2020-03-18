@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 interface ExperienceItemObject {
   title: string;
@@ -24,7 +24,7 @@ const experienceItems: ExperienceItemObject[] = [
   },
 ]
 
-const Experience = () => (
+const Experience: FC = () => (
   <div>
     <h2>Experience</h2>
     <dl>

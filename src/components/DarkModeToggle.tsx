@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 
@@ -8,7 +8,7 @@ const ToggleComponent = styled.div`
   z-index: 2;
 `;
 
-const DarkModeToggle = () => {
+const DarkModeToggle: FC = () => {
   const { disable, enable, toggle, value } = useDarkMode(true);
 
   return (

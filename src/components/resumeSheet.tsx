@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
+
 import Experience from './experienceSection';
 import Projects from './projectSection';
 import Contact from './contactSection';
@@ -69,7 +70,7 @@ const Section = styled.section`
   }
 `;
 
-const ResumeSheet = () => (
+const ResumeSheet: FC = () => (
   <Sheet>
     <Section>
       <Projects />

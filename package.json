@@ -6,6 +6,7 @@
   "author": "Taylor Osbourne",
   "dependencies": {
     "@primer/octicons-react": "^9.3.1",
+    "@types/react-helmet": "^5.0.15",
     "@types/styled-components": "^5.0.1",
     "babel-plugin-styled-components": "^1.10.6",
     "downloadjs": "^1.4.7",
