@@ -18,7 +18,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const postTemplate = path.resolve('src/templates/blogPost.tsx');
   const tagTemplate = path.resolve('src/templates/tagPosts.tsx');
 
-  const res = await graphql(`
+  const { data, errors } = await graphql(`
     {
       allMarkdownRemark(filter: {frontmatter: {type: {eq: "post"}}}) {
         edges {
@@ -39,18 +39,18 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
-  if (res.errors) {
-    return Promise.reject(res.errors);
+  if (errors) {
+    return Promise.reject(errors);
   };
 
-  res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
       component: postTemplate,
     });
   });
 
-  res.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.tag,
       component: tagTemplate,
