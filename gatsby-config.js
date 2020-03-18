@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: `https://taylorosbourne.com/`,
   },
   plugins: [
+    `gatsby-plugin-typescript`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,

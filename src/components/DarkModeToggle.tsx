@@ -1,6 +1,7 @@
 import React from 'react';
-import useDarkMode from 'use-dark-mode';
 import styled from 'styled-components';
+import useDarkMode from 'use-dark-mode';
+
 import Toggle from './Toggle';
 
 const ToggleComponent = styled.div`
@@ -8,15 +9,15 @@ const ToggleComponent = styled.div`
 `;
 
 const DarkModeToggle = () => {
-  const darkMode = useDarkMode(true);
+  const { disable, enable, toggle, value } = useDarkMode(true);
 
   return (
     <ToggleComponent className="dark-mode-toggle">
-      <button type="button" className="sun" onClick={darkMode.disable}>
+      <button type="button" className="sun" onClick={disable}>
         ☀
       </button>
-      <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
-      <button type="button" onClick={darkMode.enable}>
+      <Toggle checked={value} onChange={toggle} />
+      <button type="button" onClick={enable}>
         ☾
       </button>
     </ToggleComponent>
