@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { graphql } from 'gatsby';
+
 import Layout from '../components/layout';
 import BlogPost from '../components/blogPost';
 
-const BlogPostTemplate = ({ data }) => {
-  const { html: __html } = data.markdownRemark;
-  const { title, date } = data.markdownRemark.frontmatter;
+interface Props {
+  data: {
+    markdownRemark: {
+      html: string;
+      frontmatter: {
+        title: string;
+        date: string;
+      }
+    }
+  }
+}
+
+const BlogPostTemplate: FC<Props> = ({ data }) => {
+  const { html: __html, frontmatter } = data.markdownRemark;
+  const { title, date } = frontmatter;
   return (
     <Layout>
       <BlogPost __html={__html} title={title} date={date} />

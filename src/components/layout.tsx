@@ -15,7 +15,7 @@ const Main = styled.main`
 `;
 
 interface Props {
-  children: ReactChildren;
+  children: any;
 }
 
 const Layout: FC<Props> = ({ children }) => (

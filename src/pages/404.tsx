@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
+
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { StyledGatsbyLink } from '../styles/Link';
@@ -13,7 +14,7 @@ const UhOh = styled.h1`
   }
 `;
 
-const NotFoundPage = () => (
+const NotFoundPage: FC = () => (
   <Layout>
     <SEO title={`Page not found - ${siteMetadata.title}`} />
     <div

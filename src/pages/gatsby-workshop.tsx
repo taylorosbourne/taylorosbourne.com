@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Slider from "react-slick";
@@ -49,7 +49,20 @@ const StyledSlide = styled.div`
   }
 `;
 
-const GatsbyWorkshop = ({ data }) => {
+interface Props {
+  data: {
+    allMarkdownRemark: {
+      edges: Array<{
+        node: {
+          id: string;
+          html: string;
+        }
+      }>;
+    }
+  };
+}
+
+const GatsbyWorkshop: FC<Props> = ({ data }) => {
   const slides = data.allMarkdownRemark.edges;
   
   const settings = {
@@ -74,7 +87,7 @@ const GatsbyWorkshop = ({ data }) => {
         }}
       >
         {slides.map((slide, i) => {
-          const { frontmatter, id, html: __html } = slide.node;
+          const { id, html: __html } = slide.node;
           return (
             <div key={i} style={{
               width: `80%`,

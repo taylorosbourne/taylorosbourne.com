@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { graphql } from 'gatsby';
+
 import Layout from '../components/layout';
 import GeneralInfo from '../components/generalInfo';
 import PostList from '../components/postList';
 
-const TagPostsTemplate = ({ data }) => {
+interface Props {
+  data: {
+    allMarkdownRemark: {
+      edges
+    }
+  }
+}
+
+const TagPostsTemplate: FC<Props> = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
       <br />
       <br />
-      <GeneralInfo />
+      <GeneralInfo resume={false} />
       <PostList posts={posts} />
     </Layout>
   );

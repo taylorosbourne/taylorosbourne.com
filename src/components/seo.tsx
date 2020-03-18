@@ -3,9 +3,9 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 interface SEO  {
-  description: string;
-  lang: string;
-  meta: Array<{}> | any;
+  description?: string;
+  lang?: string;
+  meta?: Array<{}> | any;
   title: string;
 }
 
