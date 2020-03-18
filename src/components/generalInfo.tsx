@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
@@ -46,7 +46,11 @@ const SectionHeader = styled.h2`
   padding-bottom: 5px;
 `;
 
-const GeneralInfo = ({ resume }) => (
+interface Props {
+  resume: boolean;
+}
+
+const GeneralInfo: FC<Props> = ({ resume }) => (
   <InfoContainer>
     <Spiel>
       <SectionHeader>
@@ -56,33 +60,18 @@ const GeneralInfo = ({ resume }) => (
         I'm a full-stack JavaScript Dev with a soft-spot for Ruby. I like to
         write about being a developer today.
       </p>
-      {!resume ? (
-        <Link
-          to="/resume"
-          style={{
-            display: `inline-block`,
-            marginRight: `15px`,
-            textDecoration: `none`,
-            borderBottom: `3px #dc322f dashed`,
-            color: `#b58900`,
-          }}
-        >
-          Resume
-        </Link>
-      ) : (
-        <Link
-          to="/"
-          style={{
-            display: `inline-block`,
-            marginRight: `15px`,
-            textDecoration: `none`,
-            borderBottom: `3px #dc322f dashed`,
-            color: `#b58900`,
-          }}
-        >
-          Blog
-        </Link>
-      )}
+      <Link
+        to={!resume ? '/resume' : '/'}
+        style={{
+          display: `inline-block`,
+          marginRight: `15px`,
+          textDecoration: `none`,
+          borderBottom: `3px #dc322f dashed`,
+          color: `#b58900`,
+        }}
+      >
+        {!resume ? 'Resume' : 'Blog'}
+      </Link>
     </Spiel>
     <InfoList>
       <li>

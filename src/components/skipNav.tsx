@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const SkipNavCon = styled.div`
@@ -24,9 +24,9 @@ const SkipNavButton = styled.a`
   }
 `;
 
-const SkipNav = () => (
+const SkipNav: FC = () => (
   <SkipNavCon>
-    <SkipNavButton href="#main" alt="skip-nav">
+    <SkipNavButton href="#main">
       Skip Navigation
     </SkipNavButton>
   </SkipNavCon>
