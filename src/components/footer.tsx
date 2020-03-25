@@ -47,6 +47,18 @@ const footerItems: FooterLinkObject[] = [
     href: 'https://www.linkedin.com/in/taylor-osbourne/',
     title: 'Linkedin',
   },
+  {
+    href: 'https://twitter.com/taylorgosbourne',
+    title: 'Twitter',
+  },
+  {
+    href: 'https://repl.it/@TaylorOsbourne',
+    title: 'Repl.it',
+  },
+  {
+    href: 'https://codepen.io/tozkat/pens/public',
+    title: 'Codepen',
+  }
 ]
 
 const Footer: FC = () => (
