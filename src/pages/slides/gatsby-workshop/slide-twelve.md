@@ -7,6 +7,10 @@ slide: 12
 ## Our Posts Component
 
 ```javascript
+src/components/postList.js
+```
+
+```javascript
 import React from 'react';
 import { Link } from "gatsby"
 

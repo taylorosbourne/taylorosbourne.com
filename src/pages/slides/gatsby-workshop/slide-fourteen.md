@@ -6,7 +6,7 @@ slide: 14
 
 ## Dynamic Page Creation
 
-```bash
+```javascript
 src/template/blogPost.js
 ```
 

@@ -11,6 +11,10 @@ npm install --save gatsby-plugin-styled-components styled-components babel-plugi
 ```
 
 ```javascript
+src/components/layout.js
+```
+
+```javascript
 const Container = styled.div`
   margin: 0 auto;
   max-width: 960px;

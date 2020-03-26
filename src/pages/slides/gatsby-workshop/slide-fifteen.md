@@ -7,6 +7,10 @@ slide: 15
 ## Gatsby Node
 
 ```javascript
+gatsby-node.js
+```
+
+```javascript
 const path = require('path');
 
 exports.createPages = async ({ actions, graphql }) => {
