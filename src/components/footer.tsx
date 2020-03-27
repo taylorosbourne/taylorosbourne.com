@@ -8,7 +8,6 @@ const StyledFooter = styled.footer`
   max-width: 760px;
   margin: 0 auto;
   margin-top: 45px;
-  font-weight: 200;
   @media (max-width: 800px) {
     max-width: 90%;
   }
@@ -20,13 +19,24 @@ const LinkContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 25px;
+  @media(max-width: 600px) {
+    flex-wrap: wrap;
+    width: 450px;
+    justify-content: flex-start;
+    * {
+      margin-right: 10px;
+    }
+  }
 `;
 
 const FooterLink = styled.a`
   color: #b58900;
   margin-right: 15px;
   text-decoration: none;
-  border-bottom: 3px #dc322f dashed;
+  border-bottom: 3px rgba(0,0,0,0) dashed;
+  :hover {
+    border-bottom: 3px #dc322f dashed;
+  }
 `;
 
 interface FooterLinkObject {

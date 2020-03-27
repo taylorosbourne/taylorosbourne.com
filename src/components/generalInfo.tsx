@@ -46,6 +46,18 @@ const SectionHeader = styled.h2`
   padding-bottom: 5px;
 `;
 
+const StyledLink = styled(Link)`
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 3px rgba(0,0,0,0) dashed;
+  color: #b58900;
+  :hover {
+    border-bottom: 3px #dc322f dashed;
+  }
+`;
+
 interface Props {
   resume: boolean;
 }
@@ -60,18 +72,9 @@ const GeneralInfo: FC<Props> = ({ resume }) => (
         I'm a full-stack JavaScript Dev with a soft-spot for Ruby. I like to
         write about being a developer today.
       </p>
-      <Link
-        to={!resume ? '/resume' : '/'}
-        style={{
-          display: `inline-block`,
-          marginRight: `15px`,
-          textDecoration: `none`,
-          borderBottom: `3px #dc322f dashed`,
-          color: `#b58900`,
-        }}
-      >
+      <StyledLink to={!resume ? '/resume' : '/'}>
         {!resume ? 'Resume' : 'Blog'}
-      </Link>
+      </StyledLink>
     </Spiel>
     <InfoList>
       <li>
