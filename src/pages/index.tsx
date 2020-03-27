@@ -7,13 +7,14 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PostList from '../components/postList';
 import GeneralInfo from '../components/generalInfo';
+import WorkshopList from '../components/workshopList';
 
 const SectionHeader = styled.h2`
   margin-top: 0;
   font-weight: 200;
   color: #b58900;
   border-bottom: 3px #dc322f dashed;
-  width: 205px;
+  display: inline-block;
   padding-bottom: 5px;
 `;
 
@@ -47,6 +48,11 @@ const IndexPage: FC<Props> = ({ data }) => {
       <SectionHeader>Recent Articles</SectionHeader>
       <PostList posts={posts} />
       <StyledLink to="/blog">view all</StyledLink>
+      <br />
+      <br />
+      <br />
+      <SectionHeader>Workshops</SectionHeader>
+      <WorkshopList />
     </Layout>
   );
 };

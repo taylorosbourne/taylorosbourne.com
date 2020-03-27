@@ -42,7 +42,7 @@ const SectionHeader = styled.h2`
   font-weight: 200;
   color: #b58900;
   border-bottom: 3px #dc322f dashed;
-  width: 205px;
+  display: inline-block;
   padding-bottom: 5px;
 `;
 
