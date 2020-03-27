@@ -19,6 +19,14 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const TagContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 500px;
+  flex-wrap: wrap;
+`;
+
 const Brackets = styled.span`
   font-size: 2rem;
   border-bottom: 3px rgba(0,0,0,0) dashed;
@@ -49,22 +57,23 @@ const BlogPage: FC<Props> = ({ data }) => {
       <SEO title={`${title} - Developer`} />
       <br />
       <br />
-      <div style={{
-        display: `flex`,
-        alignItems: `center`,
-        justifyContent: `flex-start`,
-        minWidth: `500px`,
-        flexWrap: `wrap`
-      }}>
-        <span style={{fontSize: `1.35rem`}}><span style={{color: `#268bd2`}}>const</span> tags = </span>
+      <TagContainer>
+        <span style={{ fontSize: `1.35rem` }}>
+          <span style={{ color: `#268bd2` }}>const</span> tags =
+        </span>
         <Brackets>{"["}</Brackets>
         {uniqueTags.map((tag, i) => {
           return (
-            <StyledLink to={`/${tag}`} key={i}>{tag}{i === uniqueTags.length - 1 ? "" : ","}</StyledLink>
+            <StyledLink 
+              to={`/${tag}`} 
+              key={i}
+            >
+              {tag}{i !== uniqueTags.length - 1 && ","}
+            </StyledLink>
           );
         })}
         <Brackets>{"]"}</Brackets>
-      </div>
+      </TagContainer>
       <br />
       <PostList posts={posts} />
     </Layout>
