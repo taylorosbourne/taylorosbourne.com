@@ -1,11 +1,32 @@
 import React, { FC } from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import styled from 'styled-components';
 
 import { siteMetadata } from '../../gatsby-config';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PostList from '../components/postList';
 import GeneralInfo from '../components/generalInfo';
+
+const SectionHeader = styled.h2`
+  margin-top: 0;
+  font-weight: 200;
+  color: #b58900;
+  border-bottom: 3px #dc322f dashed;
+  width: 205px;
+  padding-bottom: 5px;
+`;
+
+const StyledLink = styled(Link)`
+  display: inline-block;
+  margin-right: 15px;
+  text-decoration: none;
+  border-bottom: 3px rgba(0,0,0,0) dashed;
+  color: #b58900;
+  :hover {
+    border-bottom: 3px #dc322f dashed;
+  }
+`;
 
 interface Props {
   data: {
@@ -23,7 +44,9 @@ const IndexPage: FC<Props> = ({ data }) => {
       <SEO title={`${title} - Developer`} />
       <br />
       <GeneralInfo resume={false} />
+      <SectionHeader>Recent Articles</SectionHeader>
       <PostList posts={posts} />
+      <StyledLink to="/blog">view all</StyledLink>
     </Layout>
   );
 };
@@ -33,6 +56,7 @@ export const RECENT_POSTS_QUERY = graphql`
     allMarkdownRemark(
       filter: {frontmatter: {type: {eq: "post"}}}
       sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
     ) {
       edges {
         node {
