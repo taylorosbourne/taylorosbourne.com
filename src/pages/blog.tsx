@@ -23,7 +23,7 @@ const TagContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  min-width: 500px;
+  min-width: 200px;
   flex-wrap: wrap;
 `;
 
