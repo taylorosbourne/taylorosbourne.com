@@ -7,6 +7,16 @@ const ListItem = styled.li`
   }
 `;
 
+const StyledSpan = styled.span`
+  color: #b58900;
+  padding-bottom: 5px;
+  border-bottom: 3px rgba(0,0,0,0) dashed;
+  font-weight: 300;
+  :hover {
+    border-bottom: 3px #dc322f dashed;
+  }
+`;
+
 interface ListItemObject {
   title: string;
   sourceHref: string;
@@ -71,18 +81,12 @@ const Projects = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span
-                  style={{
-                    color: `#b58900`,
-                    paddingBottom: `5px`,
-                    borderBottom: `3px #dc322f dashed`,
-                  }}
-                >
+                <StyledSpan>
                   Github{' '}
                   <span role="img" aria-label="emoji">
                     &#10024;
-              </span>
-                </span>
+                  </span>
+                </StyledSpan>
               </a>
               <a
                 style={{
@@ -92,16 +96,10 @@ const Projects = () => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span
-                  style={{
-                    color: `#b58900`,
-                    paddingBottom: `5px`,
-                    borderBottom: `3px #dc322f dashed`,
-                  }}
-                >
+                <StyledSpan>
                   {live}{' '}
                   <span role="img" aria-label="emoji" dangerouslySetInnerHTML={__html} />
-                </span>
+                </StyledSpan>
               </a>
             </span>
           </ListItem>
