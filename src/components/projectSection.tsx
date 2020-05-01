@@ -27,6 +27,13 @@ interface ListItemObject {
 
 const listItems: ListItemObject[] = [
   {
+    title: 'cra-temp-ts-apollo',
+    sourceHref: 'https://github.com/taylorosbourne/cra-template-typescript-apollo',
+    live: 'NPM',
+    liveHref: 'https://www.npmjs.com/package/cra-template-typescript-apollo',
+    liveEmoji: { __html: '&#9889;' },
+  },
+  {
     title: 'dad-joke CLI',
     sourceHref: 'https://github.com/taylorosbourne/dad-joke-cli',
     live: 'NPM',
@@ -41,18 +48,25 @@ const listItems: ListItemObject[] = [
     liveEmoji: { __html: '&#9889;' },
   },
   {
-    title: 'yante',
-    sourceHref: 'https://github.com/taylorosbourne/yante',
-    live: 'Chrome',
-    liveHref: 'https://chrome.google.com/webstore/detail/yante/cdadmhaleiandaodcgnlaebdijngpmhn/reviews',
-    liveEmoji: { __html: '&#127752;' },
-  },
-  {
     title: 'steelandsilverpod',
     sourceHref: 'https://github.com/taylorosbourne/steelandsilverpod.com',
     live: 'Site',
     liveHref: 'https://www.steelandsilverpod.com/',
     liveEmoji: { __html: '&#127881;' },
+  },
+  {
+    title: 'this-site',
+    sourceHref: 'https://github.com/taylorosbourne/taylorosbourne.com',
+    live: 'Site',
+    liveHref: 'https://www.taylorosbourne.com/',
+    liveEmoji: { __html: '&#127881;' },
+  },
+  {
+    title: 'yante',
+    sourceHref: 'https://github.com/taylorosbourne/yante',
+    live: 'Chrome',
+    liveHref: 'https://chrome.google.com/webstore/detail/yante/cdadmhaleiandaodcgnlaebdijngpmhn/reviews',
+    liveEmoji: { __html: '&#127752;' },
   },
 ];
 
