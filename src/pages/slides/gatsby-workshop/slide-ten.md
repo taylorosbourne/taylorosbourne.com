@@ -2,6 +2,9 @@
 workshop: 'Gatsby Workshop'
 type: 'slide'
 slide: 10
+link: 'gatsby-workshop'
+date: '2020-02-22'
+duration: 3
 ---
 
 ## Our First Query

@@ -2,6 +2,9 @@
 workshop: 'Gatsby Workshop'
 type: 'slide'
 slide: 14
+link: 'gatsby-workshop'
+date: '2020-02-22'
+duration: 3
 ---
 
 ## Dynamic Page Creation

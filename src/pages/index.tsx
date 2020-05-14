@@ -8,6 +8,7 @@ import SEO from '../components/seo';
 import PostList from '../components/postList';
 import GeneralInfo from '../components/generalInfo';
 import WorkshopList from '../components/workshopList';
+import KindWords from '../components/kindWords';
 
 const SectionHeader = styled.h2`
   margin-top: 0;
@@ -53,6 +54,9 @@ const IndexPage: FC<Props> = ({ data }) => {
       <br />
       <SectionHeader>Workshops</SectionHeader>
       <WorkshopList />
+      <br />
+      <SectionHeader>Nice Things, said by Nice People</SectionHeader>
+      <KindWords />
     </Layout>
   );
 };

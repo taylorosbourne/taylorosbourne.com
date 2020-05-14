@@ -2,6 +2,9 @@
 workshop: 'Gatsby Workshop'
 type: 'slide'
 slide: 2
+link: 'gatsby-workshop'
+date: '2020-02-22'
+duration: 3
 ---
 
 ## Workshop Roadmap

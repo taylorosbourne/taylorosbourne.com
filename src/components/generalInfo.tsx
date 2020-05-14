@@ -58,6 +58,15 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const Age = () => {
+  const month = new Date().getMonth();
+  const year = new Date().getFullYear();
+  if (month < 7) {
+    return <>{year - 1994}</>
+  }
+  return <>{year - 1993}</>
+};
+
 interface Props {
   resume: boolean;
 }
@@ -86,7 +95,7 @@ const GeneralInfo: FC<Props> = ({ resume }) => (
         <span role="img" aria-label="age-and-pronouns">
           🚀
         </span>{' '}
-        26-years-old. He/Him
+        {<Age/>}-years-old. He/Him
       </li>
       <li>
         <span role="img" aria-label="family">

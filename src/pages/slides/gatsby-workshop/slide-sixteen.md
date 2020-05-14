@@ -2,6 +2,9 @@
 workshop: 'Gatsby Workshop'
 type: 'slide'
 slide: 16
+link: 'gatsby-workshop'
+date: '2020-02-22'
+duration: 3
 ---
 
 ## Adding Style with JavaScript

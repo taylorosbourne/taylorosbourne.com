@@ -19,6 +19,9 @@ const WorkshopList: FC = () => {
             frontmatter {
               type
               workshop
+              link
+              date
+              duration
             }
           }
         }
@@ -32,19 +35,8 @@ const WorkshopList: FC = () => {
   return (
     <>
       {workshopInfo.map((ws, i) => {
-        const { workshop } = ws.node.frontmatter;
-        
-        // This is an unholy abomination
-        const link = workshop
-          .split(' ')
-          .join('')
-          .replace(/([A-Z])/g, "-$1")
-          .toLowerCase()
-          .split('')
-          .filter((_, i) => {
-            return i !== 0;
-          });
-        
+        const { workshop, link, date, duration } = ws.node.frontmatter;
+
         return (
           <div
             key={i}
@@ -56,8 +48,15 @@ const WorkshopList: FC = () => {
             id={i === 0 ? 'main' : null}
           >
             <h3 className="article-title">
-              <StyledGatsbyLink to={`/${link.join('')}`}>{workshop} - Slides</StyledGatsbyLink>
+              <StyledGatsbyLink to={`/${link}`}>{workshop} - Slides</StyledGatsbyLink>
             </h3>
+            <small>
+            <span style={{ color: `#6c71c4` }}>{date}</span>{' '}
+            <span role="img" aria-label="read">
+              Duration ⏰:
+            </span>
+            {' '}{duration} hours
+          </small>
           </div>
         );
       })}
