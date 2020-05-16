@@ -81,7 +81,7 @@ const KindWords: FC = () => {
       const splitBody = body.split(' ');
       return (
         <Blockquote key={i}>
-          {splitBody.filter((word, i) => splitBody.indexOf(word) <= (isShowing ? splitBody.length : 20)).join(' ') + (isShowing ? '' : '...')}
+          {splitBody.filter((word, i) => i < (isShowing ? splitBody.length : 28)).join(' ') + (isShowing ? ' ' : '...')}
           <Button onClick={() => setIsShowing(!isShowing)}>{isShowing? 'show less': 'show more'}</Button>
           <Cite>
             <a href={`${website}`} target="no_blank">{name}</a>
