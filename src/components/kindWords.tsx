@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const QuoteContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   @media (max-width: 700px) {
@@ -15,7 +16,7 @@ const QuoteContainer = styled.div`
 const Blockquote = styled.blockquote`
   border: 3px #dc322f dashed;
   margin: 5px 0px;
-  width: 48%;
+  width: 49.35%;
   padding: 22px;
   @media (max-width: 700px) {
     width: 96%;
@@ -57,12 +58,17 @@ const quotes: Quote[] = [
   {
     name: 'Cecelia Martinez',
     body: 'Taylor has a collaborative, approachable style to teaching that is very effective. He uses examples and metaphors well to explain concepts, and is gracious and patient when answering questions. He does well with adapting material to a wide range of skill levels within one class.  I would definitely recommend him as an instructor and developer.',
-    website: 'https://ceceliacreates.netlify.app/'
+    website: 'https://ceceliacreates.netlify.app/',
   },
   {
     name: 'Adam Topper',
     body: `When we were looking for a Full Stack Developer to help us enhance our API offerings and build out a new Front End, we were skeptical about bringing someone in without a lot of traditional experience. Taylor exceeded expectations right out the door with his ability to pick up full process flows and new technologies quickly. In his one year with us, Taylor has continued to sharpen his skills and we've been able to trust his design decisions every step of the way. He has been a great addition to our team and I look forward to working with him more now and in the future.`,
-    website: 'https://www.linkedin.com/in/adam-topper-27940221/'
+    website: 'https://www.linkedin.com/in/adam-topper-27940221/',
+  },
+  {
+    name: 'Daniel Pino',
+    body: `Taylor was an ideal student at General Assembly. While he may not have always been the student who instantly understood each concept the moment it was taught, his work ethic and determination placed him at the top of the class project after project. He is a joy to be around, and he can always be seen with a smile on his face. After I re-entered the industry, I personally tried to refer Taylor onto my team, and I would be thrilled to work with Taylor in the future.`,
+    website: 'https://www.linkedin.com/in/daniel-pino/',
   }
 ];
 
