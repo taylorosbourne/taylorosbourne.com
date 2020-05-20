@@ -13,10 +13,10 @@ const QuoteContainer = styled.div`
   }
 `;
 
-const Blockquote = styled.blockquote`
+const Blockquote = styled.blockquote<{isShowing: boolean}>`
   border: 3px #dc322f dashed;
   margin: 5px 0px;
-  width: 49.35%;
+  width: ${props => props.isShowing ? '96%' : '49.35%'};
   padding: 22px;
   @media (max-width: 700px) {
     width: 96%;
@@ -80,8 +80,8 @@ const KindWords: FC = () => {
       const { name, body, website } = quote;
       const splitBody = body.split(' ');
       return (
-        <Blockquote key={i}>
-          {splitBody.filter((word, i) => i < (isShowing ? splitBody.length : 28)).join(' ') + (isShowing ? ' ' : '...')}
+        <Blockquote key={i} isShowing={isShowing}>
+            {splitBody.filter((word, i) => i < (isShowing ? splitBody.length : 28)).join(' ') + (isShowing ? ' ' : '...')}
           <Button onClick={() => setIsShowing(!isShowing)}>{isShowing? 'show less': 'show more'}</Button>
           <Cite>
             <a href={`${website}`} target="no_blank">{name}</a>
