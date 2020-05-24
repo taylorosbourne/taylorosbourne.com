@@ -78,7 +78,7 @@ const GeneralInfo: FC<Props> = ({ resume }) => (
         Hi, I'm Taylor
       </SectionHeader>
       <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>
-        I'm a full-stack JavaScript Dev with a soft-spot for Ruby. I like to
+        I'm a full-stack <span style={{ textDecoration: `line-through dashed #dc322f` }}>JavaScript</span> TypeScript Dev with an interest in Rust, and a soft-spot for Ruby. I like to
         write about being a developer today.
       </p>
       <StyledLink to={!resume ? '/resume' : '/'}>
@@ -95,7 +95,7 @@ const GeneralInfo: FC<Props> = ({ resume }) => (
         <span role="img" aria-label="age-and-pronouns">
           🚀
         </span>{' '}
-        {<Age/>}-years-old. He/Him
+        {<Age />}-years-old. He/Him
       </li>
       <li>
         <span role="img" aria-label="family">
