@@ -50,6 +50,10 @@ const footerItems: FooterLinkObject[] = [
     title: 'Github',
   },
   {
+    href: 'https://www.npmjs.com/~tozkatusedhyperbeam',
+    title: 'NPM'
+  },
+  {
     href: 'https://taylorosbourne.com/rss.xml',
     title: 'RSS',
   },
@@ -68,7 +72,7 @@ const footerItems: FooterLinkObject[] = [
   {
     href: 'https://codepen.io/tozkat/pens/public',
     title: 'Codepen',
-  }
+  },
 ]
 
 const Footer: FC = () => (
