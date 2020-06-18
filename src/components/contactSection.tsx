@@ -31,7 +31,7 @@ const listItems: ListItemObject[] = [
   },
   {
     category: 'twitter',
-    content: 'twitter.com/taylorosbourne',
+    content: 'twitter.com/taylorgosbourne',
     color: '#268bd2'
   },
 ]
