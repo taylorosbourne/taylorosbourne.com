@@ -16,7 +16,7 @@ interface ListItemObject {
 const listItems: ListItemObject[] = [
   {
     category: 'email',
-    content: 'taylorgosbourne@gmail.com',
+    content: 'taylorosbourne@protonmail.com',
     color: '#859900',
   },
   {
@@ -45,7 +45,7 @@ const Contact: FC = () => (
         return (
           <ListItem key={i}>
             <span style={{ color }}>{category}:</span>
-            {content}
+            <a style={{textDecoration: `none`, color: `#fff`}} href={`https://${content}`}>{content}</a>
           </ListItem>
         )
       })}
