@@ -48,13 +48,6 @@ const listItems: ListItemObject[] = [
     liveEmoji: { __html: '&#9889;' },
   },
   {
-    title: 'steelandsilverpod',
-    sourceHref: 'https://github.com/taylorosbourne/steelandsilverpod.com',
-    live: 'Site',
-    liveHref: 'https://www.steelandsilverpod.com/',
-    liveEmoji: { __html: '&#127881;' },
-  },
-  {
     title: 'this-site',
     sourceHref: 'https://github.com/taylorosbourne/taylorosbourne.com',
     live: 'Site',
