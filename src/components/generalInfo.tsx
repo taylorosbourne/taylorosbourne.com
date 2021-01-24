@@ -78,7 +78,7 @@ const GeneralInfo: FC<Props> = ({ resume }) => (
         Hi, I'm Taylor
       </SectionHeader>
       <p style={{ lineHeight: `1.5`, fontSize: `20px` }}>
-        I'm a full-stack <span style={{ textDecoration: `line-through dashed #dc322f` }}>JavaScript</span> TypeScript Dev with an interest in Rust, and a soft-spot for Ruby. I like to
+        I'm a Software Engineer, primarily working in <span style={{ textDecoration: `line-through dashed #dc322f` }}>JavaScript</span> TypeScript, with an interest in Rust, and a soft-spot for Ruby. I like to
         write about being a developer today.
       </p>
       <StyledLink to={!resume ? '/resume' : '/'}>

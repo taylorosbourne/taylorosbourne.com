@@ -8,9 +8,14 @@ interface ExperienceItemObject {
 
 const experienceItems: ExperienceItemObject[] = [
   {
-    title: 'SOFTWARE DEVELOPER - MANHEIM',
-    date: 'APR 2019 - ',
-    content: 'As a developer at Manheim, I am responsible for maintaining, adding features, and providing support for an ecosystem of internal applications. Daily, I use technologies including: Ruby on Rails, MongoDB, React.js, Jenkins, and Docker.',
+    title: 'SOFTWARE ENGINEER - FLASHTRACT',
+    date: 'AUGUST 2020 - ',
+    content: 'As an engineer at Flashtract, I work on our Web Application\'s UI, SPA state management, data fetching, and more.  Currently working primarily in TypeScript and React.',
+  },
+  {
+    title: 'SOFTWARE ENGINEER - MANHEIM',
+    date: 'APR 2019 - JUL 2020',
+    content: 'As a developer at Manheim, I was responsible for maintaining, adding features, and providing support for an ecosystem of internal applications. Daily, I used technologies including: Ruby on Rails, MongoDB, React.js, Jenkins, and Docker.',
   },
   {
     title: 'INSTRUCTOR ASSOCIATE - GENERAL ASSEMBLY',
