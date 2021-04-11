@@ -1,8 +1,8 @@
 # taylorosbourne.com
 
-[![License: MIT](https://img.shields.io/github/license/taylorosbourne/taylorosbourne.com?style=flat-square&color=blue)](https://taylorosbourne.com)
-[![Maintainability](https://api.codeclimate.com/v1/badges/418eb5799833e186a0a4/maintainability)](https://codeclimate.com/github/taylorosbourne/taylorosbourne.com/maintainability)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/0b930c0f-a22b-47cb-b4a4-5155c09b42e2/deploy-status)](https://app.netlify.com/sites/taylorosbourne/deploys)
+[![License: MIT](https://img.shields.io/github/license/taylorosbourne/taylorosbourne.com?style=for-the-badge&color=blue)](https://taylorosbourne.com)
+![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/taylorosbourne/taylorosbourne.com?color=45d298&logo=code%20climate&style=for-the-badge)
+![Netlify](https://img.shields.io/netlify/0b930c0f-a22b-47cb-b4a4-5155c09b42e2?color=%2315847b&logo=netlify&style=for-the-badge)
 
 ## Acknowledgements
 
